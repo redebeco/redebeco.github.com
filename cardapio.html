@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cardápio - Beco</title>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html" class="logo">
+          <img src="attached_assets/image.png" alt="Logo Beco" width="50">
+          <span class="logo-text">Beco</span>
+        </a>
+        
+        <nav>
+          <ul class="nav-menu">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="cardapio.html" class="active">Cardápio</a></li>
+            <li><a href="club.html">Club do Beco</a></li>
+            <li><a href="delivery.html">Delivery</a></li>
+            <li><a href="cupons.html">Cupons</a></li>
+          </ul>
+        </nav>
+        
+        <div class="order-btn-wrapper">
+          <a href="https://www.ifood.com.br" target="_blank" class="order-btn">Peça Agora</a>
+        </div>
+        
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu-close" id="mobileMenuClose">
+      <i class="fas fa-times"></i>
+    </button>
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="cardapio.html">Cardápio</a></li>
+      <li><a href="club.html">Club do Beco</a></li>
+      <li><a href="delivery.html">Delivery</a></li>
+      <li><a href="cupons.html">Cupons</a></li>
+      <li><a href="https://www.ifood.com.br" target="_blank" class="order-btn">Peça Agora</a></li>
+    </ul>
+  </div>
+  
+  <div class="overlay" id="overlay"></div>
+  
+  <!-- Cardápio Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Nosso <span>Cardápio</span></h1>
+          <p>Conheça nossas deliciosas opções de hambúrgueres, acompanhamentos e bebidas.</p>
+        </div>
+        <div class="hero-img">
+          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd" alt="Hambúrguer Especial do Beco">
+        </div>
+      </div>
+    </div>
+    <div class="wave-divider">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"></path>
+      </svg>
+    </div>
+  </section>
+  
+  <!-- Menu Categories -->
+  <section class="featured-menu">
+    <div class="container">
+      <div class="section-title">
+        <h2>Nossos Burgers</h2>
+        <p>Hambúrgueres artesanais feitos com ingredientes frescos e de alta qualidade</p>
+      </div>
+      
+      <div class="menu-grid">
+        <div class="menu-card">
+          <img src="https://images.unsplash.com/photo-1550547660-d9450f859349" alt="Beco Original">
+          <div class="menu-card-content">
+            <div class="menu-card-top">
+              <h3>Beco Original</h3>
+              <span class="badge">Bestseller</span>
+            </div>
+            <p>Hambúrguer de 150g, queijo cheddar, alface, tomate e molho especial.</p>
+            <div class="ifood-badge">
+              <i class="fas fa-shopping-bag"></i> Disponível no iFood
+            </div>
+          </div>
+        </div>
+        
+        <div class="menu-card">
+          <img src="https://images.unsplash.com/photo-1619881590738-a111d176d906" alt="Beco Supreme">
+          <div class="menu-card-content">
+            <div class="menu-card-top">
+              <h3>Beco Supreme</h3>
+              <span class="badge new">Novo</span>
+            </div>
+            <p>Hambúrguer de 180g, queijo especial, cebola caramelizada e molho de ervas.</p>
+            <div class="ifood-badge">
+              <i class="fas fa-shopping-bag"></i> Disponível no iFood
+            </div>
+          </div>
+        </div>
+        
+        <div class="menu-card">
+          <img src="https://images.unsplash.com/photo-1547584370-2cc98b8b8dc8" alt="Beco Duplo Bacon">
+          <div class="menu-card-content">
+            <div class="menu-card-top">
+              <h3>Beco Duplo Bacon</h3>
+            </div>
+            <p>Dois hambúrgueres de 150g, bacon crocante, queijo cheddar e molho barbecue.</p>
+            <div class="ifood-badge">
+              <i class="fas fa-shopping-bag"></i> Disponível no iFood
+            </div>
+          </div>
+        </div>
+        
+        <div class="menu-card">
+          <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b" alt="Beco Bacon Supreme">
+          <div class="menu-card-content">
+            <div class="menu-card-top">
+              <h3>Beco Bacon Supreme</h3>
+            </div>
+            <p>Bacon crocante, cebola caramelizada, queijo especial e molho barbecue.</p>
+            <div class="ifood-badge">
+              <i class="fas fa-shopping-bag"></i> Disponível no iFood
+            </div>
+          </div>
+        </div>
+        
+        <div class="menu-card">
+          <img src="https://images.unsplash.com/photo-1596662951482-0c4ba74a6df6" alt="Duplo Especial">
+          <div class="menu-card-content">
+            <div class="menu-card-top">
+              <h3>Duplo Especial</h3>
+            </div>
+            <p>Dois hambúrgueres, queijo cheddar, molho especial e picles em pão artesanal.</p>
+            <div class="ifood-badge">
+              <i class="fas fa-shopping-bag"></i> Disponível no iFood
+            </div>
+          </div>
+        </div>
+        
+        <div class="menu-card">
+          <img src="https://images.unsplash.com/photo-1565299507177-b0ac66763828" alt="Plango Original">
+          <div class="menu-card-content">
+            <div class="menu-card-top">
+              <h3>Plango Original</h3>
+            </div>
+            <p>Hambúrguer de frango, queijo, alface, tomate e maionese especial.</p>
+            <div class="ifood-badge">
+              <i class="fas fa-shopping-bag"></i> Disponível no iFood
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Combos Section -->
+  <section class="featured-menu" style="background-color: #f0f7fa;">
+    <div class="container">
+      <div class="section-title">
+        <h2>Combos</h2>
+        <p>Os melhores combos para matar sua fome</p>
+      </div>
+      
+      <div class="menu-grid">
+        <div class="menu-card">
+          <img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d" alt="Combo Beco Especial">
+          <div class="menu-card-content">
+            <div class="menu-card-top">
+              <h3>Combo Beco Especial</h3>
+            </div>
+            <p>Hambúrguer Beco, batata frita e refrigerante à sua escolha.</p>
+            <div class="ifood-badge">
+              <i class="fas fa-shopping-bag"></i> Disponível no iFood
+            </div>
+          </div>
+        </div>
+        
+        <div class="menu-card">
+          <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5" alt="Combo Família">
+          <div class="menu-card-content">
+            <div class="menu-card-top">
+              <h3>Combo Família</h3>
+              <span class="badge">Bestseller</span>
+            </div>
+            <p>4 hambúrgueres, 2 batatas grandes, 4 refrigerantes e 4 sobremesas.</p>
+            <div class="ifood-badge">
+              <i class="fas fa-shopping-bag"></i> Disponível no iFood
+            </div>
+          </div>
+        </div>
+        
+        <div class="menu-card">
+          <img src="https://images.unsplash.com/photo-1610614819513-58e34989848b" alt="Combo Duplo">
+          <div class="menu-card-content">
+            <div class="menu-card-top">
+              <h3>Combo Duplo</h3>
+            </div>
+            <p>2 hambúrgueres, 1 batata grande e 2 refrigerantes.</p>
+            <div class="ifood-badge">
+              <i class="fas fa-shopping-bag"></i> Disponível no iFood
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-about">
+          <div class="footer-logo">
+            <img src="attached_assets/image.png" alt="Logo Beco" height="40">
+            <span style="color: var(--beco-cream); font-family: 'Baloo 2'; font-weight: bold; margin-left: 10px;">Beco</span>
+          </div>
+          <p>É no Beco que o sabor se esconde. Hambúrgueres artesanais feitos com ingredientes frescos e muito amor.</p>
+        </div>
+        
+        <div class="footer-links-section">
+          <h4 class="footer-heading">Links Rápidos</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="cardapio.html">Cardápio</a></li>
+            <li><a href="club.html">Club do Beco</a></li>
+            <li><a href="delivery.html">Delivery</a></li>
+            <li><a href="cupons.html">Cupons</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact-section">
+          <h4 class="footer-heading">Contato</h4>
+          <ul class="footer-contact">
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Av. Paulista, 1000 - São Paulo, SP</span>
+            </li>
+            <li>
+              <i class="fas fa-phone"></i>
+              <span>(11) 3456-7890</span>
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <span>contato@beco.com.br</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="footer-social-section">
+          <h4 class="footer-heading">Siga-nos</h4>
+          <div class="social-links">
+            <a href="#" class="social-link">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social-link">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="social-link">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+          
+          <h4 class="footer-heading">Newsletter</h4>
+          <form class="newsletter-form">
+            <input type="email" class="newsletter-input" placeholder="Seu e-mail">
+            <button type="submit" class="newsletter-btn">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2024 Beco. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Mobile Menu
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenuClose = document.getElementById('mobileMenuClose');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const overlay = document.getElementById('overlay');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.add('open');
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+    
+    mobileMenuClose.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+    
+    overlay.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  </script>
+</body>
+</html>
