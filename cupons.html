@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cupons - Beco</title>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html" class="logo">
+          <img src="attached_assets/image.png" alt="Logo Beco" width="50">
+          <span class="logo-text">Beco</span>
+        </a>
+        
+        <nav>
+          <ul class="nav-menu">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="cardapio.html">Cardápio</a></li>
+            <li><a href="club.html">Club do Beco</a></li>
+            <li><a href="delivery.html">Delivery</a></li>
+            <li><a href="cupons.html" class="active">Cupons</a></li>
+          </ul>
+        </nav>
+        
+        <div class="order-btn-wrapper">
+          <a href="https://www.ifood.com.br" target="_blank" class="order-btn">Peça Agora</a>
+        </div>
+        
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu-close" id="mobileMenuClose">
+      <i class="fas fa-times"></i>
+    </button>
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="cardapio.html">Cardápio</a></li>
+      <li><a href="club.html">Club do Beco</a></li>
+      <li><a href="delivery.html">Delivery</a></li>
+      <li><a href="cupons.html">Cupons</a></li>
+      <li><a href="https://www.ifood.com.br" target="_blank" class="order-btn">Peça Agora</a></li>
+    </ul>
+  </div>
+  
+  <div class="overlay" id="overlay"></div>
+  
+  <!-- Cupons Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Cupons e <span>Promoções</span></h1>
+          <p>Aproveite nossas promoções exclusivas e economize em seus pedidos favoritos!</p>
+        </div>
+        <div class="hero-img">
+          <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5" alt="Promoções Beco">
+        </div>
+      </div>
+    </div>
+    <div class="wave-divider">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"></path>
+      </svg>
+    </div>
+  </section>
+  
+  <!-- Cupons Section -->
+  <section class="featured-menu">
+    <div class="container">
+      <div class="section-title">
+        <h2>Cupons Disponíveis</h2>
+        <p>Use estes cupons para economizar em seus pedidos no iFood ou diretamente em nossas lojas</p>
+      </div>
+      
+      <div class="menu-grid">
+        <div class="coupon-card">
+          <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5" alt="Combo Família">
+          <div class="coupon-content">
+            <div class="coupon-top">
+              <h3>Combo Família</h3>
+              <span class="discount-badge">30% OFF</span>
+            </div>
+            <p>4 hambúrgueres, 2 batatas grandes, 4 refrigerantes e 2 sobremesas.</p>
+            <div class="coupon-code">FAMILIA2024</div>
+            <p class="coupon-expiry">Válido até: 31/12/2024</p>
+          </div>
+        </div>
+        
+        <div class="coupon-card">
+          <img src="https://images.unsplash.com/photo-1550547660-d9450f859349" alt="Meio de Semana">
+          <div class="coupon-content">
+            <div class="coupon-top">
+              <h3>Meio de Semana</h3>
+              <span class="discount-badge">25% OFF</span>
+            </div>
+            <p>Lanche + Batata + Bebida por preço promocional toda quarta-feira.</p>
+            <div class="coupon-code">QUARTA2024</div>
+            <p class="coupon-expiry">Válido até: 31/12/2024</p>
+          </div>
+        </div>
+        
+        <div class="coupon-card">
+          <img src="https://images.unsplash.com/photo-1547584370-2cc98b8b8dc8" alt="Fome de Beco">
+          <div class="coupon-content">
+            <div class="coupon-top">
+              <h3>Fome de Beco</h3>
+              <span class="discount-badge">15% OFF</span>
+            </div>
+            <p>Dois lanches pelo preço de um e meio.</p>
+            <div class="coupon-code">FOME2024</div>
+            <p class="coupon-expiry">Válido até: 31/12/2024</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Cupons Especiais -->
+  <section class="featured-menu" style="background-color: #f0f7fa;">
+    <div class="container">
+      <div class="section-title">
+        <h2>Cupons Especiais</h2>
+        <p>Promoções exclusivas para ocasiões especiais</p>
+      </div>
+      
+      <div class="menu-grid">
+        <div class="coupon-card">
+          <img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d" alt="Combo para Dois">
+          <div class="coupon-content">
+            <div class="coupon-top">
+              <h3>Combo para Dois</h3>
+              <span class="discount-badge">20% OFF</span>
+            </div>
+            <p>2 hambúrgueres, 1 batata grande, 2 refrigerantes.</p>
+            <div class="coupon-code">DOIS2024</div>
+            <p class="coupon-expiry">Válido até: 31/12/2024</p>
+          </div>
+        </div>
+        
+        <div class="coupon-card">
+          <img src="https://images.unsplash.com/photo-1565299507177-b0ac66763828" alt="Estudante">
+          <div class="coupon-content">
+            <div class="coupon-top">
+              <h3>Estudante</h3>
+              <span class="discount-badge">10% OFF</span>
+            </div>
+            <p>Desconto especial para estudantes. Necessário apresentar carteirinha.</p>
+            <div class="coupon-code">ESTUDO2024</div>
+            <p class="coupon-expiry">Válido até: 31/12/2024</p>
+          </div>
+        </div>
+        
+        <div class="coupon-card">
+          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd" alt="Aniversariante">
+          <div class="coupon-content">
+            <div class="coupon-top">
+              <h3>Aniversariante</h3>
+              <span class="discount-badge">Lanche Grátis</span>
+            </div>
+            <p>Lanche grátis no dia do seu aniversário. Necessário apresentar documento.</p>
+            <div class="coupon-code">PARABENS</div>
+            <p class="coupon-expiry">Válido até: 31/12/2024</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- App Download Section -->
+  <section class="about">
+    <div class="container">
+      <div class="section-title">
+        <h2>Baixe Nosso App</h2>
+        <p>Tenha acesso a cupons exclusivos e muito mais no app do Beco</p>
+      </div>
+      
+      <div class="about-content">
+        <div class="about-text">
+          <h2>Mais Descontos no App</h2>
+          <p>Baixe o aplicativo oficial do Beco e tenha acesso a promoções e cupons exclusivos disponíveis apenas para usuários do app.</p>
+          <p>Acompanhe seus pedidos em tempo real, acumule pontos a cada compra e troque por recompensas incríveis!</p>
+          <div style="display: flex; margin-top: 20px; gap: 10px;">
+            <a href="#" style="display: inline-block;">
+              <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download na App Store" height="40">
+            </a>
+            <a href="#" style="display: inline-block;">
+              <img src="https://play.google.com/intl/en_us/badges/static/images/badges/pt-br_badge_web_generic.png" alt="Disponível no Google Play" height="40">
+            </a>
+          </div>
+        </div>
+        <div class="about-img">
+          <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c" alt="App Beco">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-about">
+          <div class="footer-logo">
+            <img src="attached_assets/image.png" alt="Logo Beco" height="40">
+            <span style="color: var(--beco-cream); font-family: 'Baloo 2'; font-weight: bold; margin-left: 10px;">Beco</span>
+          </div>
+          <p>É no Beco que o sabor se esconde. Hambúrgueres artesanais feitos com ingredientes frescos e muito amor.</p>
+        </div>
+        
+        <div class="footer-links-section">
+          <h4 class="footer-heading">Links Rápidos</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="cardapio.html">Cardápio</a></li>
+            <li><a href="club.html">Club do Beco</a></li>
+            <li><a href="delivery.html">Delivery</a></li>
+            <li><a href="cupons.html">Cupons</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact-section">
+          <h4 class="footer-heading">Contato</h4>
+          <ul class="footer-contact">
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Av. Paulista, 1000 - São Paulo, SP</span>
+            </li>
+            <li>
+              <i class="fas fa-phone"></i>
+              <span>(11) 3456-7890</span>
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <span>contato@beco.com.br</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="footer-social-section">
+          <h4 class="footer-heading">Siga-nos</h4>
+          <div class="social-links">
+            <a href="#" class="social-link">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social-link">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="social-link">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+          
+          <h4 class="footer-heading">Newsletter</h4>
+          <form class="newsletter-form">
+            <input type="email" class="newsletter-input" placeholder="Seu e-mail">
+            <button type="submit" class="newsletter-btn">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2024 Beco. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Mobile Menu
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenuClose = document.getElementById('mobileMenuClose');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const overlay = document.getElementById('overlay');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.add('open');
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+    
+    mobileMenuClose.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+    
+    overlay.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  </script>
+</body>
+</html>
