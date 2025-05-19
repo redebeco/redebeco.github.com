@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Delivery - Beco</title>
+  <link rel="icon" type="image/png" href="attached_assets/image.png">
+  <title>Beco - O melhor e mais gostoso!</title>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
@@ -14,22 +15,21 @@
     <div class="container">
       <div class="header-content">
         <a href="index.html" class="logo">
-          <img src="attached_assets/image.png" alt="Logo Beco" width="50">
-          <span class="logo-text">Beco</span>
+          <img src="attached_assets/image.png" alt="Logo Beco"  width="80">
         </a>
         
         <nav>
           <ul class="nav-menu">
-            <li><a href="index.html">Início</a></li>
-            <li><a href="cardapio.html">Cardápio</a></li>
-            <li><a href="club.html">Club do Beco</a></li>
-            <li><a href="delivery.html" class="active">Delivery</a></li>
-            <li><a href="cupons.html">Cupons</a></li>
+            <li><a class="header-btn" href="index.html">Início</a></li>
+            <li><a class="header-btn" href="cupons.html">Cupons</a></li>
+            <li><a class="header-btn" href="cardapio.html">Cardápio</a></li>
+            <li><a class="header-btn" href="club.html">Club do Beco</a></li>
+            <li><a class="header-btn active" href="delivery.html">Delivery</a></li>
           </ul>
         </nav>
         
         <div class="order-btn-wrapper">
-          <a href="https://www.ifood.com.br" target="_blank" class="order-btn">Peça Agora</a>
+          <a href="https://www.ifood.com.br/delivery/joinville-sc/beco-fatima/1db60d9c-7d80-448a-8a23-46ae675f4904" target="_blank" class="order-btn">Peça pelo Ifood</a>
         </div>
         
         <button class="mobile-menu-btn" id="mobileMenuBtn">
@@ -45,12 +45,12 @@
       <i class="fas fa-times"></i>
     </button>
     <ul>
-      <li><a href="index.html">Início</a></li>
-      <li><a href="cardapio.html">Cardápio</a></li>
-      <li><a href="club.html">Club do Beco</a></li>
-      <li><a href="delivery.html">Delivery</a></li>
-      <li><a href="cupons.html">Cupons</a></li>
-      <li><a href="https://www.ifood.com.br" target="_blank" class="order-btn">Peça Agora</a></li>
+      <li><a class="header-btn" href="index.html">Início</a></li>
+      <li><a class="header-btn" href="cardapio.html">Cardápio</a></li>
+      <li><a class="header-btn" href="club.html">Club do Beco</a></li>
+      <li><a class="header-btn" href="delivery.html">Delivery</a></li>
+      <li><a class="header-btn" href="cupons.html">Cupons</a></li>
+      <li><a class="header-btn" href="https://www.ifood.com.br/delivery/joinville-sc/beco-fatima/1db60d9c-7d80-448a-8a23-46ae675f4904" target="_blank" class="order-btn">Pelo Ifood</a></li>
     </ul>
   </div>
   
@@ -64,12 +64,11 @@
           <h1><span>Delivery</span> Beco</h1>
           <p>Receba o sabor do Beco diretamente na sua casa, com entrega rápida e segura!</p>
           <div class="btn-group">
-            <a href="https://www.ifood.com.br" target="_blank" class="btn btn-primary">Pedir pelo iFood</a>
-            <a href="#delivery-info" class="btn btn-secondary">Informações</a>
+            <a href="https://www.ifood.com.br/delivery/joinville-sc/beco-fatima/1db60d9c-7d80-448a-8a23-46ae675f4904" target="_blank" class="btn btn-primary">Pedir pelo iFood</a>
           </div>
         </div>
         <div class="hero-img">
-          <img src="https://images.unsplash.com/photo-1561868843-e781c7c0e5b3" alt="Delivery Beco">
+          <img src="attached_assets/noproduct.png" alt="">
         </div>
       </div>
     </div>
@@ -79,185 +78,46 @@
       </svg>
     </div>
   </section>
-  
-  <!-- Como Pedir Section -->
-  <section class="featured-menu" id="delivery-info">
-    <div class="container">
-      <div class="section-title">
-        <h2>Como Pedir</h2>
-        <p>Escolha a forma mais conveniente de fazer seu pedido</p>
-      </div>
-      
-      <div class="values-grid">
-        <div class="value-card">
-          <div class="value-icon">
-            <i class="fas fa-mobile-alt"></i>
-          </div>
-          <h4>Pelo App</h4>
-          <p>Baixe o aplicativo do Beco ou use o iFood para fazer seu pedido com facilidade.</p>
-          <div style="display: flex; margin-top: 20px; gap: 10px; justify-content: center;">
-            <a href="#" style="display: inline-block;">
-              <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download na App Store" height="35">
-            </a>
-            <a href="#" style="display: inline-block;">
-              <img src="https://play.google.com/intl/en_us/badges/static/images/badges/pt-br_badge_web_generic.png" alt="Disponível no Google Play" height="35">
-            </a>
-          </div>
-        </div>
-        
-        <div class="value-card">
-          <div class="value-icon">
-            <i class="fas fa-globe"></i>
-          </div>
-          <h4>Pelo Site</h4>
-          <p>Acesse nosso site oficial e faça seu pedido diretamente pela nossa plataforma.</p>
-          <a href="#" class="btn btn-primary" style="margin-top: 20px; display: inline-block;">Pedir Online</a>
-        </div>
-        
-        <div class="value-card">
-          <div class="value-icon">
-            <i class="fas fa-phone"></i>
-          </div>
-          <h4>Por Telefone</h4>
-          <p>Ligue para a unidade mais próxima e faça seu pedido diretamente com nossos atendentes.</p>
-          <a href="tel:1134567890" class="btn btn-primary" style="margin-top: 20px; display: inline-block;">(11) 3456-7890</a>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Áreas de Entrega -->
-  <section class="about" style="background-color: #f0f7fa;">
-    <div class="container">
-      <div class="section-title">
-        <h2>Áreas de Entrega</h2>
-        <p>Confira os bairros atendidos e os valores de frete</p>
-      </div>
-      
-      <div class="about-content">
-        <div class="about-text">
-          <h2>Zonas de Entrega</h2>
-          <p>Entregamos em diversos bairros da cidade com tempos e valores de frete variados de acordo com a distância:</p>
-          
-          <div style="margin-top: 30px;">
-            <div style="background-color: rgba(32, 177, 199, 0.1); padding: 15px; border-radius: 10px; margin-bottom: 15px;">
-              <h4 style="color: var(--beco-turquoise); font-size: 1.1rem; margin-bottom: 5px;">Zona 1 - Até 3km</h4>
-              <p style="margin: 0;">Entrega em até 30 minutos | Frete: <strong>Grátis</strong></p>
-              <p style="margin-top: 5px; font-size: 0.9rem; color: #666;">Bairros: Jardins, Pinheiros, Vila Madalena, Itaim Bibi</p>
-            </div>
-            
-            <div style="background-color: rgba(92, 181, 70, 0.1); padding: 15px; border-radius: 10px; margin-bottom: 15px;">
-              <h4 style="color: var(--beco-green); font-size: 1.1rem; margin-bottom: 5px;">Zona 2 - De 3km a 6km</h4>
-              <p style="margin: 0;">Entrega em até 45 minutos | Frete: <strong>R$ 5,00</strong></p>
-              <p style="margin-top: 5px; font-size: 0.9rem; color: #666;">Bairros: Moema, Campo Belo, Vila Olímpia, Brooklin</p>
-            </div>
-            
-            <div style="background-color: rgba(6, 57, 76, 0.1); padding: 15px; border-radius: 10px;">
-              <h4 style="color: var(--beco-blue); font-size: 1.1rem; margin-bottom: 5px;">Zona 3 - De 6km a 10km</h4>
-              <p style="margin: 0;">Entrega em até 60 minutos | Frete: <strong>R$ 10,00</strong></p>
-              <p style="margin-top: 5px; font-size: 0.9rem; color: #666;">Bairros: Morumbi, Butantã, Saúde, Vila Mariana</p>
-            </div>
-          </div>
-          
-          <p style="margin-top: 20px; font-size: 0.9rem;"><i class="fas fa-info-circle" style="color: var(--beco-turquoise);"></i> Para pedidos acima de R$ 100, o frete é grátis em todas as zonas de entrega.</p>
-        </div>
-        
-        <div class="about-img">
-          <img src="https://images.unsplash.com/photo-1494905998402-395d579af36f" alt="Mapa de Entrega">
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Embalagens Section -->
-  <section class="featured-menu">
-    <div class="container">
-      <div class="section-title">
-        <h2>Embalagens Especiais</h2>
-        <p>Cuidado especial para manter a qualidade do seu lanche</p>
-      </div>
-      
-      <div class="about-content">
-        <div class="about-img">
-          <img src="https://images.unsplash.com/photo-1577308856961-8e9ec50d0c67" alt="Embalagens Beco">
-        </div>
-        
-        <div class="about-text">
-          <h2>Embalagens que preservam o sabor</h2>
-          <p>Desenvolvemos embalagens especiais que mantêm a temperatura e a qualidade dos nossos hambúrgueres e acompanhamentos durante o transporte:</p>
-          
-          <ul style="list-style: none; margin-top: 20px;">
-            <li style="margin-bottom: 15px; display: flex; align-items: center;">
-              <i class="fas fa-check-circle" style="color: var(--beco-turquoise); margin-right: 10px;"></i>
-              <span>Embalagens que respiram, mantendo o hambúrguer crocante</span>
-            </li>
-            <li style="margin-bottom: 15px; display: flex; align-items: center;">
-              <i class="fas fa-check-circle" style="color: var(--beco-turquoise); margin-right: 10px;"></i>
-              <span>Compartimentos separados para molhos e acompanhamentos</span>
-            </li>
-            <li style="margin-bottom: 15px; display: flex; align-items: center;">
-              <i class="fas fa-check-circle" style="color: var(--beco-turquoise); margin-right: 10px;"></i>
-              <span>Design inovador que preserva o calor</span>
-            </li>
-            <li style="margin-bottom: 15px; display: flex; align-items: center;">
-              <i class="fas fa-check-circle" style="color: var(--beco-turquoise); margin-right: 10px;"></i>
-              <span>Materiais sustentáveis e biodegradáveis</span>
-            </li>
-            <li style="display: flex; align-items: center;">
-              <i class="fas fa-check-circle" style="color: var(--beco-turquoise); margin-right: 10px;"></i>
-              <span>Lacres de segurança em todos os produtos</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-  
+   
   <!-- Promoções de Delivery -->
   <section class="featured-menu" style="background-color: #f0f7fa;">
     <div class="container">
       <div class="section-title">
-        <h2>Promoções de Delivery</h2>
-        <p>Ofertas exclusivas para pedidos de entrega</p>
+        <h2>TOPs Delivery</h2>
+        <p>Os pedidos que sao mais famosos do delivery!</p>
       </div>
       
       <div class="menu-grid">
         <div class="coupon-card">
-          <img src="https://images.unsplash.com/photo-1610614819513-58e34989848b" alt="Combo Delivery">
+          <img src="attached_assets/noproduct.png" alt="">
           <div class="coupon-content">
             <div class="coupon-top">
-              <h3>Combo Delivery</h3>
-              <span class="discount-badge">10% OFF</span>
+              <h3>Combo Beco Classico</h3>
             </div>
-            <p>Hambúrguer + Batata + Bebida com desconto exclusivo para pedidos online.</p>
-            <div class="coupon-code">DELIVERY10</div>
-            <p class="coupon-expiry">Válido para todos os dias</p>
+            <p></p>
+            <div class="coupon-code">Compre pelo Ifood!</div>
           </div>
         </div>
         
         <div class="coupon-card">
-          <img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d" alt="Frete Grátis">
+          <img src="attached_assets/noproduct.png" alt="">
           <div class="coupon-content">
             <div class="coupon-top">
-              <h3>Frete Grátis</h3>
-              <span class="discount-badge">Frete Grátis</span>
+              <h3>Combo Beco Peao</h3>
             </div>
-            <p>Em pedidos acima de R$ 80 para qualquer região.</p>
-            <div class="coupon-code">FRETEFREE</div>
-            <p class="coupon-expiry">Válido de segunda a quinta</p>
+            <p></p>
+            <div class="coupon-code">Compre pelo Ifood!</div>
           </div>
         </div>
         
         <div class="coupon-card">
-          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd" alt="Compre 2, Leve 3">
+          <img src="attached_assets/noproduct.png" alt="">
           <div class="coupon-content">
             <div class="coupon-top">
-              <h3>Compre 2, Leve 3</h3>
-              <span class="discount-badge">1 Grátis</span>
+              <h3>Combo Beco Kids</h3>
             </div>
-            <p>Compre 2 hambúrgueres e ganhe o terceiro grátis. Válido para mesmo sabor.</p>
-            <div class="coupon-code">LEVE3</div>
-            <p class="coupon-expiry">Válido aos finais de semana</p>
+            <p></p>
+            <div class="coupon-code">Compre pelo Ifood!</div>
           </div>
         </div>
       </div>
@@ -271,19 +131,18 @@
         <div class="footer-about">
           <div class="footer-logo">
             <img src="attached_assets/image.png" alt="Logo Beco" height="40">
-            <span style="color: var(--beco-cream); font-family: 'Baloo 2'; font-weight: bold; margin-left: 10px;">Beco</span>
           </div>
-          <p>É no Beco que o sabor se esconde. Hambúrgueres artesanais feitos com ingredientes frescos e muito amor.</p>
+          <p>É no Beco que o sabor se esconde!<br>Hambúrgueres artesanais feitos com ingredientes frescos e muito amor.</p>
         </div>
         
         <div class="footer-links-section">
           <h4 class="footer-heading">Links Rápidos</h4>
           <ul class="footer-links">
-            <li><a href="index.html">Início</a></li>
-            <li><a href="cardapio.html">Cardápio</a></li>
-            <li><a href="club.html">Club do Beco</a></li>
-            <li><a href="delivery.html">Delivery</a></li>
-            <li><a href="cupons.html">Cupons</a></li>
+            <li><a class="header-btn" href="index.html">Início</a></li>
+            <li><a class="header-btn" href="cardapio.html">Cardápio</a></li>
+            <li><a class="header-btn" href="club.html">Club do Beco</a></li>
+            <li><a class="header-btn" href="delivery.html">Delivery</a></li>
+            <li><a class="header-btn" href="cupons.html">Cupons</a></li>
           </ul>
         </div>
         
@@ -292,15 +151,15 @@
           <ul class="footer-contact">
             <li>
               <i class="fas fa-map-marker-alt"></i>
-              <span>Av. Paulista, 1000 - São Paulo, SP</span>
+              <span>- Joinville, SC</span>
             </li>
             <li>
               <i class="fas fa-phone"></i>
-              <span>(11) 3456-7890</span>
+              <span>(47) 9748-4860</span>
             </li>
             <li>
               <i class="fas fa-envelope"></i>
-              <span>contato@beco.com.br</span>
+              <span>redebeco@outlook.com</span>
             </li>
           </ul>
         </div>
@@ -318,19 +177,11 @@
               <i class="fab fa-twitter"></i>
             </a>
           </div>
-          
-          <h4 class="footer-heading">Newsletter</h4>
-          <form class="newsletter-form">
-            <input type="email" class="newsletter-input" placeholder="Seu e-mail">
-            <button type="submit" class="newsletter-btn">
-              <i class="fas fa-paper-plane"></i>
-            </button>
-          </form>
         </div>
       </div>
       
       <div class="footer-bottom">
-        <p>&copy; 2024 Beco. Todos os direitos reservados.</p>
+        <p>&copy; 2025 Beco. Todos os direitos reservados.</p>
       </div>
     </div>
   </footer>

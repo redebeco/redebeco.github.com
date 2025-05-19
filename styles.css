@@ -54,6 +54,8 @@ header {
 
 .logo img {
   margin-right: 10px;
+  position: absolute;
+  top: 13px;
 }
 
 .logo-text {
@@ -73,14 +75,13 @@ header {
 }
 
 .nav-menu a {
-  color: var(--beco-cream);
   text-decoration: none;
-  font-weight: 500;
+  font-weight: bold;
   transition: color 0.3s;
 }
 
 .nav-menu a:hover, .nav-menu a.active {
-  color: var(--beco-turquoise);
+  color: #20b1c7;
 }
 
 .order-btn {
@@ -98,6 +99,24 @@ header {
 }
 
 .order-btn:hover {
+  opacity: 0.9;
+}
+
+.header-btn {
+  background-color: var(--beco-dark);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-family: 'Baloo 2', cursive;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.header-btn:hover {
   opacity: 0.9;
 }
 
@@ -174,6 +193,10 @@ header {
 .btn-primary {
   background-color: var(--beco-turquoise);
   color: white;
+}
+
+.btn-header {
+  background-color: var(--beco-cream);
 }
 
 .btn-secondary {
@@ -273,6 +296,10 @@ header {
 }
 
 .badge.new {
+  background-color: #c79920;
+}
+
+.badge.verde {
   background-color: var(--beco-turquoise);
 }
 
@@ -750,4 +777,31 @@ footer {
   .footer-content {
     grid-template-columns: 1fr;
   }
+}
+.tooltip {
+  position: relative;
+  cursor: help;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: 220px;
+  background-color: #3d332d;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 10px;
+  position: absolute;
+  z-index: 10;
+  bottom: 125%; /* ajusta a posição do balão */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 0.85rem;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
 }

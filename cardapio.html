@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cardápio - Beco</title>
+  <link rel="icon" type="image/png" href="attached_assets/image.png">
+  <title>Beco - O melhor e mais gostoso!</title>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
@@ -14,22 +15,21 @@
     <div class="container">
       <div class="header-content">
         <a href="index.html" class="logo">
-          <img src="attached_assets/image.png" alt="Logo Beco" width="50">
-          <span class="logo-text">Beco</span>
+          <img src="attached_assets/image.png" alt="Logo Beco"  width="80">
         </a>
         
         <nav>
           <ul class="nav-menu">
-            <li><a href="index.html">Início</a></li>
-            <li><a href="cardapio.html" class="active">Cardápio</a></li>
-            <li><a href="club.html">Club do Beco</a></li>
-            <li><a href="delivery.html">Delivery</a></li>
-            <li><a href="cupons.html">Cupons</a></li>
+            <li><a class="header-btn" href="index.html">Início</a></li>
+            <li><a class="header-btn" href="cupons.html">Cupons</a></li>
+            <li><a class="header-btn active" href="cardapio.html">Cardápio</a></li>
+            <li><a class="header-btn" href="club.html">Club do Beco</a></li>
+            <li><a class="header-btn" href="delivery.html">Delivery</a></li>
           </ul>
         </nav>
         
         <div class="order-btn-wrapper">
-          <a href="https://www.ifood.com.br" target="_blank" class="order-btn">Peça Agora</a>
+          <a href="https://www.ifood.com.br/delivery/joinville-sc/beco-fatima/1db60d9c-7d80-448a-8a23-46ae675f4904" target="_blank" class="order-btn">Peça pelo Ifood</a>
         </div>
         
         <button class="mobile-menu-btn" id="mobileMenuBtn">
@@ -45,12 +45,12 @@
       <i class="fas fa-times"></i>
     </button>
     <ul>
-      <li><a href="index.html">Início</a></li>
-      <li><a href="cardapio.html">Cardápio</a></li>
-      <li><a href="club.html">Club do Beco</a></li>
-      <li><a href="delivery.html">Delivery</a></li>
-      <li><a href="cupons.html">Cupons</a></li>
-      <li><a href="https://www.ifood.com.br" target="_blank" class="order-btn">Peça Agora</a></li>
+      <li><a class="header-btn" href="index.html">Início</a></li>
+      <li><a class="header-btn" href="cardapio.html">Cardápio</a></li>
+      <li><a class="header-btn" href="club.html">Club do Beco</a></li>
+      <li><a class="header-btn" href="delivery.html">Delivery</a></li>
+      <li><a class="header-btn" href="cupons.html">Cupons</a></li>
+      <li><a class="header-btn" href="https://www.ifood.com.br/delivery/joinville-sc/beco-fatima/1db60d9c-7d80-448a-8a23-46ae675f4904" target="_blank" class="order-btn">Pelo Ifood</a></li>
     </ul>
   </div>
   
@@ -65,7 +65,7 @@
           <p>Conheça nossas deliciosas opções de hambúrgueres, acompanhamentos e bebidas.</p>
         </div>
         <div class="hero-img">
-          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd" alt="Hambúrguer Especial do Beco">
+          <img src="attached_assets/noproduct.png" alt="">
         </div>
       </div>
     </div>
@@ -99,42 +99,61 @@
           <h3 class="subcategory-title">Os Becos</h3>
           <div class="menu-grid">
             <div class="menu-card">
-              <img src="https://images.unsplash.com/photo-1550547660-d9450f859349" alt="Beco Original">
+              <img src="attached_assets/noproduct.png" alt="">
               <div class="menu-card-content">
                 <div class="menu-card-top">
-                  <h3>Beco Original</h3>
-                  <span class="badge">Bestseller</span>
-                </div>
-                <p>Hambúrguer de 150g, queijo cheddar, alface, tomate e molho especial.</p>
-                <div class="ifood-badge">
-                  <i class="fas fa-shopping-bag"></i> Disponível no iFood
+                  <h3>Beco Classico</h3>
+                  <span class="badge">Classico</span>
                 </div>
               </div>
             </div>
             
             <div class="menu-card">
-              <img src="https://images.unsplash.com/photo-1619881590738-a111d176d906" alt="Beco Supreme">
+              <img src="attached_assets/noproduct.png" alt="">
               <div class="menu-card-content">
                 <div class="menu-card-top">
-                  <h3>Beco Supreme</h3>
+                  <h3>Beco Duplo</h3>
                   <span class="badge new">Novo</span>
                 </div>
-                <p>Hambúrguer de 180g, queijo especial, cebola caramelizada e molho de ervas.</p>
-                <div class="ifood-badge">
-                  <i class="fas fa-shopping-bag"></i> Disponível no iFood
-                </div>
               </div>
             </div>
             
             <div class="menu-card">
-              <img src="https://images.unsplash.com/photo-1547584370-2cc98b8b8dc8" alt="Beco Duplo Bacon">
+              <img src="attached_assets/noproduct.png" alt="">
               <div class="menu-card-content">
                 <div class="menu-card-top">
-                  <h3>Beco Duplo Bacon</h3>
+                  <h3>Beco Picante</h3>
+                  <span class="badge new">Novo</span>
                 </div>
-                <p>Dois hambúrgueres de 150g, bacon crocante, queijo cheddar e molho barbecue.</p>
-                <div class="ifood-badge">
-                  <i class="fas fa-shopping-bag"></i> Disponível no iFood
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Beco Peao</h3>
+                  <span class="badge new">Novo</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Beco Supremo</h3>
+                  <span class="badge new">Novo</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Beco Verde</h3>
+                  <span class="badge verde">Vegetariano</span>
                 </div>
               </div>
             </div>
@@ -146,111 +165,225 @@
           <h3 class="subcategory-title">Mini Becos</h3>
           <div class="menu-grid">
             <div class="menu-card">
-              <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b" alt="Mini Original">
+              <img src="attached_assets/noproduct.png" alt="">
               <div class="menu-card-content">
                 <div class="menu-card-top">
-                  <h3>Mini Original</h3>
-                </div>
-                <p>Hambúrguer de 90g, queijo cheddar, alface e molho especial.</p>
-                <div class="ifood-badge">
-                  <i class="fas fa-shopping-bag"></i> Disponível no iFood
+                  <h3>Beco Mini</h3>
+                  <span class="badge new">Novo</span>
                 </div>
               </div>
             </div>
             
             <div class="menu-card">
-              <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd" alt="Mini Cheese">
+              <img src="attached_assets/noproduct.png" alt="">
               <div class="menu-card-content">
                 <div class="menu-card-top">
-                  <h3>Mini Cheese</h3>
+                  <h3>Beco Mini Duplo</h3>
+                  <span class="badge new">Novo</span>
                 </div>
-                <p>Hambúrguer de 90g com queijo duplo derretido.</p>
-                <div class="ifood-badge">
-                  <i class="fas fa-shopping-bag"></i> Disponível no iFood
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Paredão</h3>
+                  <span class="badge new">Novo</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Fogo Baixo</h3>
+                  <span class="badge new">Novo</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Mini Peao</h3>
+                  <span class="badge new">Novo</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Beco Oculto</h3>
+                  <span class="badge new">Novo</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>X Beco</h3>
+                  <span class="badge new">Novo</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>X Beco Duplo</h3>
+                  <span class="badge new">Novo</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Beco 13</h3>
+                  <span class="badge new">Novo</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
         
-        <!-- Plango -->
+        <!-- Frango -->
         <div class="subcategory">
-          <h3 class="subcategory-title">Plango</h3>
+          <h3 class="subcategory-title">Frango</h3>
           <div class="menu-grid">
             <div class="menu-card">
-              <img src="https://images.unsplash.com/photo-1565299507177-b0ac66763828" alt="Plango Original">
+              <img src="attached_assets/noproduct.png" alt="">
               <div class="menu-card-content">
                 <div class="menu-card-top">
-                  <h3>Plango Original</h3>
-                </div>
-                <p>Hambúrguer de frango, queijo, alface, tomate e maionese especial.</p>
-                <div class="ifood-badge">
-                  <i class="fas fa-shopping-bag"></i> Disponível no iFood
+                  <h3>Chicote Original</h3>
+                  <span class="badge">Classico</span>
                 </div>
               </div>
             </div>
             
             <div class="menu-card">
-              <img src="https://images.unsplash.com/photo-1596662951482-0c4ba74a6df6" alt="Plango Crocante">
+              <img src="attached_assets/noproduct.png" alt="">
               <div class="menu-card-content">
                 <div class="menu-card-top">
-                  <h3>Plango Crocante</h3>
+                  <h3>Chicote Duplo</h3>
+                  <span class="badge new">Novo</span>
                 </div>
-                <p>Filé de frango empanado, alface, tomate e molho especial.</p>
-                <div class="ifood-badge">
-                  <i class="fas fa-shopping-bag"></i> Disponível no iFood
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Chicote Verde</h3>
+                  <span class="badge verde">Vegano</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
         
-        <!-- Combos -->
+        <!-- Staks -->
         <div class="subcategory">
-          <h3 class="subcategory-title">Combos</h3>
+          <h3 class="subcategory-title">Staks</h3>
           <div class="menu-grid">
             <div class="menu-card">
-              <img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d" alt="Combo Beco Especial">
+              <img src="attached_assets/noproduct.png" alt="">
               <div class="menu-card-content">
                 <div class="menu-card-top">
-                  <h3>Combo Beco Especial</h3>
+                  <h3>Beco Stak Duplo</h3>
+                  <span class="badge new">Novo</span>
                 </div>
-                <p>Hambúrguer Beco, batata frita e refrigerante à sua escolha.</p>
-                <div class="ifood-badge">
-                  <i class="fas fa-shopping-bag"></i> Disponível no iFood
+              </div>
+            </div>
+                       
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Beco Stak Triplo</h3>
+                  <span class="badge new">Novo</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Bacon Stak Cheddar</h3>
+                  <span class="badge new">Novo</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Bacon Stak Duplo</h3>
+                  <span class="badge new">Novo</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Bacon Stak Triplo</h3>
+                  <span class="badge new">Novo</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <!-- Frango -->
+        <div class="subcategory">
+          <h3 class="subcategory-title">Infantil</h3>
+          <div class="menu-grid">
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Mini Bequinho</h3>
+                  <span class="badge new">Novo</span>
                 </div>
               </div>
             </div>
             
             <div class="menu-card">
-              <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5" alt="Combo Família">
+              <img src="attached_assets/noproduct.png" alt="">
               <div class="menu-card-content">
                 <div class="menu-card-top">
-                  <h3>Combo Família</h3>
-                  <span class="badge">Bestseller</span>
-                </div>
-                <p>4 hambúrgueres, 2 batatas grandes, 4 refrigerantes e 4 sobremesas.</p>
-                <div class="ifood-badge">
-                  <i class="fas fa-shopping-bag"></i> Disponível no iFood
+                  <h3>Brinquedo</h3>
+                  <span class="badge new">Novo</span>
                 </div>
               </div>
             </div>
-            
+
             <div class="menu-card">
-              <img src="https://images.unsplash.com/photo-1610614819513-58e34989848b" alt="Combo Duplo">
+              <img src="attached_assets/noproduct.png" alt="">
               <div class="menu-card-content">
                 <div class="menu-card-top">
-                  <h3>Combo Duplo</h3>
-                </div>
-                <p>2 hambúrgueres, 1 batata grande e 2 refrigerantes.</p>
-                <div class="ifood-badge">
-                  <i class="fas fa-shopping-bag"></i> Disponível no iFood
+                  <h3>Beco Kids</h3>
+                  <span class="badge new">Novo</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
       
       <!-- Acompanhamentos -->
       <div class="category-content" id="acompanhamentos">
@@ -259,28 +392,31 @@
           <h3 class="subcategory-title">Batatas</h3>
           <div class="menu-grid">
             <div class="menu-card">
-              <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877" alt="Batata Frita Tradicional">
+              <img src="attached_assets/noproduct.png" alt="">
               <div class="menu-card-content">
                 <div class="menu-card-top">
-                  <h3>Batata Frita Tradicional</h3>
-                </div>
-                <p>Batatas fritas crocantes disponíveis nos tamanhos P, M e G.</p>
-                <div class="ifood-badge">
-                  <i class="fas fa-shopping-bag"></i> Disponível no iFood
+                  <h3>Batata Pequena</h3>
+                  <span class="badge new">Novo</span>
                 </div>
               </div>
             </div>
             
             <div class="menu-card">
-              <img src="https://images.unsplash.com/photo-1519133667eba-3a31219213b5" alt="Batata Frita com Cheddar e Bacon">
+              <img src="attached_assets/noproduct.png" alt="">
               <div class="menu-card-content">
                 <div class="menu-card-top">
-                  <h3>Batata com Cheddar e Bacon</h3>
-                  <span class="badge">Bestseller</span>
+                  <h3>Batata Media</h3>
+                  <span class="badge new">Novo</span>
                 </div>
-                <p>Batatas fritas cobertas com cheddar cremoso e bacon crocante.</p>
-                <div class="ifood-badge">
-                  <i class="fas fa-shopping-bag"></i> Disponível no iFood
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Batata Grande</h3>
+                  <span class="badge new">Novo</span>
                 </div>
               </div>
             </div>
@@ -289,49 +425,95 @@
         
         <!-- Onion Rings -->
         <div class="subcategory">
-          <h3 class="subcategory-title">Onion Rings</h3>
+          <h3 class="subcategory-title">Batatas Especiais</h3>
           <div class="menu-grid">
             <div class="menu-card">
-              <img src="https://images.unsplash.com/photo-1639024471283-03bce9a7c66d" alt="Onion Rings Tradicional">
+              <img src="attached_assets/noproduct.png" alt="">
               <div class="menu-card-content">
                 <div class="menu-card-top">
-                  <h3>Onion Rings Tradicional</h3>
+                  <h3>Beco Bacon Media</h3>
+                  <span class="badge new">Novo</span>
                 </div>
-                <p>Anéis de cebola empanados e fritos até ficarem crocantes.</p>
-                <div class="ifood-badge">
-                  <i class="fas fa-shopping-bag"></i> Disponível no iFood
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Beco Bacon Grande</h3>
+                  <span class="badge new">Novo</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
         
+        <div class="subcategory">
+          <h3 class="subcategory-title">Onion Rings</h3>
+          <div class="menu-grid">
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Onions Media</h3>
+                  <span class="badge new">Novo</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Onions Grande</h3>
+                  <span class="badge new">Novo</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- Molhos -->
         <div class="subcategory">
           <h3 class="subcategory-title">Molhos</h3>
           <div class="menu-grid">
             <div class="menu-card">
-              <img src="https://images.unsplash.com/photo-1574484284002-952d92456975" alt="Molho Beco">
+              <img src="attached_assets/noproduct.png" alt="">
               <div class="menu-card-content">
                 <div class="menu-card-top">
-                  <h3>Molho Beco</h3>
-                </div>
-                <p>Molho especial da casa, cremoso com toque picante.</p>
-                <div class="ifood-badge">
-                  <i class="fas fa-shopping-bag"></i> Disponível no iFood
+                  <h3>Pimentado</h3>
+                  <span class="badge new">Novo</span>
                 </div>
               </div>
             </div>
             
             <div class="menu-card">
-              <img src="https://images.unsplash.com/photo-1550304943-536e2c590ac2" alt="Molho Barbecue">
+              <img src="attached_assets/noproduct.png" alt="">
               <div class="menu-card-content">
                 <div class="menu-card-top">
-                  <h3>Molho Barbecue</h3>
+                  <h3>Churrasco</h3>
+                  <span class="badge new">Novo</span>
                 </div>
-                <p>Molho barbecue defumado e levemente adocicado.</p>
-                <div class="ifood-badge">
-                  <i class="fas fa-shopping-bag"></i> Disponível no iFood
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Maionese</h3>
+                  <span class="badge new">Novo</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Maionese Verde</h3>
+                  <span class="badge new">Novo</span>
                 </div>
               </div>
             </div>
@@ -346,128 +528,461 @@
           <h3 class="subcategory-title">Refrigerantes</h3>
           <div class="menu-grid">
             <div class="menu-card">
-              <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97" alt="Coca-Cola">
+              <img src="attached_assets/noproduct.png" alt="">
               <div class="menu-card-content">
                 <div class="menu-card-top">
-                  <h3>Coca-Cola</h3>
-                </div>
-                <p>Disponível nos tamanhos 350ml, 500ml e 700ml.</p>
-                <div class="ifood-badge">
-                  <i class="fas fa-shopping-bag"></i> Disponível no iFood
+                  <h3>Refri Pepsi</h3>
+                  <span class="badge new">Novo</span>
                 </div>
               </div>
             </div>
             
             <div class="menu-card">
-              <img src="https://images.unsplash.com/photo-1625772299849-1e215be8ee29" alt="Guaraná Antarctica">
+              <img src="attached_assets/noproduct.png" alt="">
               <div class="menu-card-content">
                 <div class="menu-card-top">
-                  <h3>Guaraná Antarctica</h3>
+                  <h3>Refri Pepsi Black</h3>
+                  <span class="badge new">Novo</span>
                 </div>
-                <p>Disponível nos tamanhos 350ml, 500ml e 700ml.</p>
-                <div class="ifood-badge">
-                  <i class="fas fa-shopping-bag"></i> Disponível no iFood
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Refri Guarana Antarctica</h3>
+                  <span class="badge new">Novo</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Refri Gauarana Antarctica Zero</h3>
+                  <span class="badge new">Novo</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Refri H2OH! Limao</h3>
+                  <span class="badge new">Novo</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Refri Sukita Uva</h3>
+                  <span class="badge new">Novo</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Refri Natual Limonada</h3>
+                  <span class="badge new">Novo</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Refri Natual Laranja</h3>
+                  <span class="badge new">Novo</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
         
-        <!-- Shakes -->
+        <!-- Sucos -->
         <div class="subcategory">
-          <h3 class="subcategory-title">Shakes</h3>
+          <h3 class="subcategory-title">Sucos</h3>
           <div class="menu-grid">
             <div class="menu-card">
-              <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699" alt="Shake de Chocolate">
+              <img src="attached_assets/noproduct.png" alt="">
               <div class="menu-card-content">
                 <div class="menu-card-top">
-                  <h3>Shake de Chocolate</h3>
-                  <span class="badge">Bestseller</span>
-                </div>
-                <p>Shake cremoso de chocolate com calda especial e chantilly.</p>
-                <div class="ifood-badge">
-                  <i class="fas fa-shopping-bag"></i> Disponível no iFood
+                  <h3>Natual One Laranja</h3>
+                  <span class="badge new">Novo</span>
                 </div>
               </div>
             </div>
-            
+
             <div class="menu-card">
-              <img src="https://images.unsplash.com/photo-1638176066299-c4b9827abffa" alt="Shake de Morango">
+              <img src="attached_assets/noproduct.png" alt="">
               <div class="menu-card-content">
                 <div class="menu-card-top">
-                  <h3>Shake de Morango</h3>
+                  <h3>Natual One Uva</h3>
+                  <span class="badge new">Novo</span>
                 </div>
-                <p>Shake cremoso de morango com calda de morango e chantilly.</p>
-                <div class="ifood-badge">
-                  <i class="fas fa-shopping-bag"></i> Disponível no iFood
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Natual One Limonada</h3>
+                  <span class="badge new">Novo</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Aguas -->
+        <div class="subcategory">
+          <h3 class="subcategory-title">Aguas</h3>
+          <div class="menu-grid">
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Agua 310ml</h3>
+                  <span class="badge new">Novo</span>
+                </div>
+              </div>
+            </div>
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Agua 500ml</h3>
+                  <span class="badge new">Novo</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Becoshakes -->
+        <div class="subcategory">
+          <h3 class="subcategory-title">Becoshakes</h3>
+          <div class="menu-grid">
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Becoshakes de Baunilha</h3>
+                  <span class="badge new">Novo</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Becoshakes de Banana</h3>
+                  <span class="badge new">Novo</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Becoshakes de Chocolate</h3>
+                  <span class="badge new">Novo</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Becoshakes de Morango</h3>
+                  <span class="badge new">Novo</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Becoshakes de Nutella</h3>
+                  <span class="badge new">Novo</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Batido Misterio</h3>
+                  <span class="badge new">Novo</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Batido Chocante</h3>
+                  <span class="badge new">Novo</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Batido Oculto</h3>
+                  <span class="badge new">Novo</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      
+
       <!-- Sobremesas -->
       <div class="category-content" id="sobremesas">
-        <!-- Sorvetes -->
+        <!-- Casquinhas -->
         <div class="subcategory">
-          <h3 class="subcategory-title">Sorvetes</h3>
+          <h3 class="subcategory-title">Casquinhas</h3>
           <div class="menu-grid">
             <div class="menu-card">
-              <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb" alt="Casquinha Mista">
+              <img src="attached_assets/noproduct.png" alt="">
               <div class="menu-card-content">
                 <div class="menu-card-top">
-                  <h3>Casquinha Mista</h3>
-                </div>
-                <p>Casquinha com sorvete de chocolate e baunilha.</p>
-                <div class="ifood-badge">
-                  <i class="fas fa-shopping-bag"></i> Disponível no iFood
+                  <h3>Casquinha de Baunilha</h3>
+                  <span class="badge new">Novo</span>
                 </div>
               </div>
             </div>
             
             <div class="menu-card">
-              <img src="https://images.unsplash.com/photo-1514849302-984523450cf4" alt="Sundae de Chocolate">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Casquinha Misty</h3>
+                  <span class="badge new">Novo</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Casquinha de Banana c/ Canela</h3>
+                  <span class="badge new">Novo</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Casquinhas Rechedas -->
+        <div class="subcategory">
+          <h3 class="subcategory-title">Casquinhas Rechedas</h3>
+          <div class="menu-grid">
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Recheda Chocolate</h3>
+                  <span class="badge new">Novo</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Recheda Leite Condensado</h3>
+                  <span class="badge new">Novo</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Recheda de Morango</h3>
+                  <span class="badge new">Novo</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Recheda de Nutella</h3>
+                  <span class="badge new">Novo</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sundaes -->
+        <div class="subcategory">
+          <h3 class="subcategory-title">Sundaes</h3>
+          <div class="menu-grid">
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Sundae de Morango</h3>
+                  <span class="badge new">Novo</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Sundae de Paçoca</h3>
+                  <span class="badge new">Novo</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
               <div class="menu-card-content">
                 <div class="menu-card-top">
                   <h3>Sundae de Chocolate</h3>
-                  <span class="badge">Bestseller</span>
+                  <span class="badge new">Novo</span>
                 </div>
-                <p>Sorvete de baunilha com calda de chocolate e granulado.</p>
-                <div class="ifood-badge">
-                  <i class="fas fa-shopping-bag"></i> Disponível no iFood
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Sundae de Nutella</h3>
+                  <span class="badge new">Novo</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cremixs -->
+        <div class="subcategory">
+          <h3 class="subcategory-title">Cremixs</h3>
+          <div class="menu-grid">
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Cremix de Nutella</h3>
+                  <span class="badge new">Novo</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Cremix de Paçoca</h3>
+                  <span class="badge new">Novo</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Cremix Chocante</h3>
+                  <span class="badge new">Novo</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Cremix Tropical</h3>
+                  <span class="badge new">Novo</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Cremix Sombrio</h3>
+                  <span class="badge new">Novo</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
         
-        <!-- Doces -->
+        <!-- Tchoc Splashs -->
         <div class="subcategory">
-          <h3 class="subcategory-title">Doces</h3>
+          <h3 class="subcategory-title">Tchoc Splashs</h3>
           <div class="menu-grid">
             <div class="menu-card">
-              <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814" alt="Brownie com Sorvete">
+              <img src="attached_assets/noproduct.png" alt="">
               <div class="menu-card-content">
                 <div class="menu-card-top">
-                  <h3>Brownie com Sorvete</h3>
-                </div>
-                <p>Brownie quentinho com sorvete de baunilha e calda de chocolate.</p>
-                <div class="ifood-badge">
-                  <i class="fas fa-shopping-bag"></i> Disponível no iFood
+                  <h3>Tchoc Splashs Original</h3>
+                  <span class="badge">Classico</span>
                 </div>
               </div>
             </div>
-            
+
             <div class="menu-card">
-              <img src="https://images.unsplash.com/photo-1614145121029-83a9f7b68bf4" alt="Petit Gateau">
+              <img src="attached_assets/noproduct.png" alt="">
               <div class="menu-card-content">
                 <div class="menu-card-top">
-                  <h3>Petit Gateau</h3>
+                  <h3>Tchoc Splashs Chocante</h3>
+                  <span class="badge new">Novo</span>
                 </div>
-                <p>Bolinho de chocolate com recheio cremoso e sorvete de baunilha.</p>
-                <div class="ifood-badge">
-                  <i class="fas fa-shopping-bag"></i> Disponível no iFood
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Tchoc Splashs de Nutella</h3>
+                  <span class="badge new">Novo</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <img src="attached_assets/noproduct.png" alt="">
+              <div class="menu-card-content">
+                <div class="menu-card-top">
+                  <h3>Tchoc Splashs de Moranguete</h3>
+                  <span class="badge new">Novo</span>
                 </div>
               </div>
             </div>
@@ -537,19 +1052,18 @@
         <div class="footer-about">
           <div class="footer-logo">
             <img src="attached_assets/image.png" alt="Logo Beco" height="40">
-            <span style="color: var(--beco-cream); font-family: 'Baloo 2'; font-weight: bold; margin-left: 10px;">Beco</span>
           </div>
-          <p>É no Beco que o sabor se esconde. Hambúrgueres artesanais feitos com ingredientes frescos e muito amor.</p>
+          <p>É no Beco que o sabor se esconde!<br>Hambúrgueres artesanais feitos com ingredientes frescos e muito amor.</p>
         </div>
         
         <div class="footer-links-section">
           <h4 class="footer-heading">Links Rápidos</h4>
           <ul class="footer-links">
-            <li><a href="index.html">Início</a></li>
-            <li><a href="cardapio.html">Cardápio</a></li>
-            <li><a href="club.html">Club do Beco</a></li>
-            <li><a href="delivery.html">Delivery</a></li>
-            <li><a href="cupons.html">Cupons</a></li>
+            <li><a class="header-btn" href="index.html">Início</a></li>
+            <li><a class="header-btn" href="cardapio.html">Cardápio</a></li>
+            <li><a class="header-btn" href="club.html">Club do Beco</a></li>
+            <li><a class="header-btn" href="delivery.html">Delivery</a></li>
+            <li><a class="header-btn" href="cupons.html">Cupons</a></li>
           </ul>
         </div>
         
@@ -558,15 +1072,15 @@
           <ul class="footer-contact">
             <li>
               <i class="fas fa-map-marker-alt"></i>
-              <span>Av. Paulista, 1000 - São Paulo, SP</span>
+              <span>- Joinville, SC</span>
             </li>
             <li>
               <i class="fas fa-phone"></i>
-              <span>(11) 3456-7890</span>
+              <span>(47) 9748-4860</span>
             </li>
             <li>
               <i class="fas fa-envelope"></i>
-              <span>contato@beco.com.br</span>
+              <span>redebeco@outlook.com</span>
             </li>
           </ul>
         </div>
@@ -584,19 +1098,11 @@
               <i class="fab fa-twitter"></i>
             </a>
           </div>
-          
-          <h4 class="footer-heading">Newsletter</h4>
-          <form class="newsletter-form">
-            <input type="email" class="newsletter-input" placeholder="Seu e-mail">
-            <button type="submit" class="newsletter-btn">
-              <i class="fas fa-paper-plane"></i>
-            </button>
-          </form>
         </div>
       </div>
       
       <div class="footer-bottom">
-        <p>&copy; 2024 Beco. Todos os direitos reservados.</p>
+        <p>&copy; 2025 Beco. Todos os direitos reservados.</p>
       </div>
     </div>
   </footer>

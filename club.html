@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Club do Beco - Beco</title>
+  <link rel="icon" type="image/png" href="attached_assets/image.png">
+  <title>Beco - O melhor e mais gostoso!</title>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
@@ -14,22 +15,21 @@
     <div class="container">
       <div class="header-content">
         <a href="index.html" class="logo">
-          <img src="attached_assets/image.png" alt="Logo Beco" width="50">
-          <span class="logo-text">Beco</span>
+          <img src="attached_assets/image.png" alt="Logo Beco"  width="80">
         </a>
         
         <nav>
           <ul class="nav-menu">
-            <li><a href="index.html">Início</a></li>
-            <li><a href="cardapio.html">Cardápio</a></li>
-            <li><a href="club.html" class="active">Club do Beco</a></li>
-            <li><a href="delivery.html">Delivery</a></li>
-            <li><a href="cupons.html">Cupons</a></li>
+            <li><a class="header-btn" href="index.html">Início</a></li>
+            <li><a class="header-btn" href="cupons.html">Cupons</a></li>
+            <li><a class="header-btn" href="cardapio.html">Cardápio</a></li>
+            <li><a class="header-btn active" href="club.html">Club do Beco</a></li>
+            <li><a class="header-btn" href="delivery.html">Delivery</a></li>
           </ul>
         </nav>
         
         <div class="order-btn-wrapper">
-          <a href="https://www.ifood.com.br" target="_blank" class="order-btn">Peça Agora</a>
+          <a href="https://www.ifood.com.br/delivery/joinville-sc/beco-fatima/1db60d9c-7d80-448a-8a23-46ae675f4904" target="_blank" class="order-btn">Peça pelo Ifood</a>
         </div>
         
         <button class="mobile-menu-btn" id="mobileMenuBtn">
@@ -45,12 +45,12 @@
       <i class="fas fa-times"></i>
     </button>
     <ul>
-      <li><a href="index.html">Início</a></li>
-      <li><a href="cardapio.html">Cardápio</a></li>
-      <li><a href="club.html">Club do Beco</a></li>
-      <li><a href="delivery.html">Delivery</a></li>
-      <li><a href="cupons.html">Cupons</a></li>
-      <li><a href="https://www.ifood.com.br" target="_blank" class="order-btn">Peça Agora</a></li>
+      <li><a class="header-btn" href="index.html">Início</a></li>
+      <li><a class="header-btn" href="cardapio.html">Cardápio</a></li>
+      <li><a class="header-btn" href="club.html">Club do Beco</a></li>
+      <li><a class="header-btn" href="delivery.html">Delivery</a></li>
+      <li><a class="header-btn" href="cupons.html">Cupons</a></li>
+      <li><a class="header-btn" href="https://www.ifood.com.br/delivery/joinville-sc/beco-fatima/1db60d9c-7d80-448a-8a23-46ae675f4904" target="_blank" class="order-btn">Pelo Ifood</a></li>
     </ul>
   </div>
   
@@ -61,15 +61,15 @@
     <div class="container">
       <div class="hero-content">
         <div class="hero-text">
-          <h1>Club do <span>Beco</span></h1>
+          <h1><span>Club</span> do Beco</h1>
           <p>Faça parte do nosso clube de vantagens exclusivas e aproveite benefícios especiais em todas as suas compras!</p>
           <div class="btn-group">
-            <a href="#cadastro" class="btn btn-primary">Cadastre-se Agora</a>
+            <a href="#cadastro" class="btn btn-primary">Como entrar</a>
             <a href="#beneficios" class="btn btn-secondary">Ver Benefícios</a>
           </div>
         </div>
         <div class="hero-img">
-          <img src="https://images.unsplash.com/photo-1555992336-fb0d29498b13" alt="Club do Beco">
+          <img src="attached_assets/noproduct.png" alt="">
         </div>
       </div>
     </div>
@@ -94,7 +94,7 @@
             <i class="fas fa-user-plus"></i>
           </div>
           <h4>Cadastre-se</h4>
-          <p>Faça seu cadastro de forma rápida e gratuita no nosso aplicativo ou site.</p>
+          <p>Faça seu cadastro de forma rápida e gratuita no nosso aplicativo do beco.</p>
         </div>
         
         <div class="value-card">
@@ -102,7 +102,7 @@
             <i class="fas fa-shopping-bag"></i>
           </div>
           <h4>Compre</h4>
-          <p>A cada compra nas lojas Beco ou pelo app, você acumula pontos automaticamente.</p>
+          <p>A cada compra nas lojas Beco pelo app, você acumula pontos automaticamente.</p>
         </div>
         
         <div class="value-card">
@@ -147,7 +147,7 @@
               <i class="fas fa-birthday-cake"></i>
             </div>
             <h4>Presente de Aniversário</h4>
-            <p>Ganhe um hambúrguer grátis no mês do seu aniversário para comemorar com a gente!</p>
+            <p>Ganhe um mini combo do beco grátis no mês do seu aniversário para comemorar com a gente!</p>
           </div>
           
           <div class="value-card">
@@ -182,32 +182,24 @@
   <section class="featured-menu" id="cadastro" style="background-color: #f0f7fa;">
     <div class="container">
       <div class="section-title">
-        <h2>Cadastre-se Agora</h2>
+        <h2>Como se cadastrar</h2>
         <p>É rápido, fácil e você já começa a ganhar benefícios imediatamente</p>
       </div>
       
       <div class="about-content">
         <div class="about-text">
-          <h2>Como se cadastrar</h2>
-          <p>Você pode se cadastrar no Club do Beco de três formas diferentes:</p>
+        <h2>Siga as Etapas:</h2>
+          <p>Você pode se cadastrar no Club do Beco com três etapas:</p>
           <ul style="list-style-type: none; margin-top: 20px;">
             <li style="margin-bottom: 15px; display: flex; align-items: center;">
-              <i class="fas fa-mobile-alt" style="color: var(--beco-turquoise); margin-right: 10px; font-size: 1.2rem;"></i>
-              <span><strong>Pelo App:</strong> Baixe o aplicativo Beco, clique em "Club do Beco" e complete seu cadastro.</span>
-            </li>
-            <li style="margin-bottom: 15px; display: flex; align-items: center;">
-              <i class="fas fa-desktop" style="color: var(--beco-turquoise); margin-right: 10px; font-size: 1.2rem;"></i>
-              <span><strong>Pelo Site:</strong> Preencha o formulário no botão abaixo e receba as instruções por e-mail.</span>
-            </li>
-            <li style="margin-bottom: 15px; display: flex; align-items: center;">
-              <i class="fas fa-store" style="color: var(--beco-turquoise); margin-right: 10px; font-size: 1.2rem;"></i>
-              <span><strong>Na Loja:</strong> Visite qualquer unidade Beco e peça para se cadastrar diretamente com nossos atendentes.</span>
+              <span><strong>Baixe o App:</strong><br> Baixe o aplicativo Beco, clique em "Club do Beco" e complete seu cadastro.</span>
+              <span><strong>Cadastre-se:</strong><br>Preencha o formulário no botão abaixo e receba as instruções por e-mail.</span>
+              <span><strong>Comece a pontuar:</strong><br>Acesse sua conta no app e já comece a acumular pontos a cada pedido</span>
             </li>
           </ul>
-          <a href="#" class="btn btn-primary" style="margin-top: 20px;">Cadastrar Online</a>
         </div>
         <div class="about-img">
-          <img src="https://images.unsplash.com/photo-1622037022022-2dc9536c1d81" alt="App Club do Beco">
+          <img src="attached_assets/noproduct.png" alt="">
         </div>
       </div>
     </div>
@@ -221,37 +213,130 @@
         <p>Quanto mais você consome, mais benefícios você desbloqueia</p>
       </div>
       
+
       <div class="values-grid" style="grid-template-columns: repeat(3, 1fr);">
-        <div class="value-card" style="border-top: 5px solid #C0C0C0;">
-          <h4 style="font-size: 1.5rem; margin-top: 10px; color: #666;">Silver</h4>
-          <div style="font-size: 2rem; margin: 15px 0; font-weight: bold; color: var(--beco-blue);">0-499 <span style="font-size: 1rem; font-weight: normal;">pontos</span></div>
+        <div class="value-card" style="border-top: 5px solid #fff;">
+          <h4 style="font-size: 1.5rem; margin-top: 10px; color: #000;">Basico</h4>
+          <ul style="text-align: left; list-style-position: inside; margin-bottom: 20px;">
+            <li>Acúmulo de pontos por compras</li>
+			<li>Promoções exclusivas para membros</li>
+			<li>Convites antecipados para lançamentos</li>
+			<li>Acumulo de pontos 2x no mes de aniversário</li>
+			<li>Gratis até o nivel Prata</li>
+		  </ul>
+        </div>
+
+        <div class="value-card" style="border-top: 5px solid #3d332d;">
+          <h4 style="font-size: 1.5rem; margin-top: 10px; color: #3d332d;">Ferro <span style="font-size: 1rem; float: inline-end; color: var(--beco-blue);">Gratis</span></h4>
+          <div style="font-size: 2rem; margin: 15px 0; font-weight: bold; color: var(--beco-blue);">0-49 <span style="font-size: 1rem; font-weight: normal;">pontos</span></div>
           <ul style="text-align: left; list-style-position: inside; margin-bottom: 20px;">
             <li>Todos os benefícios básicos</li>
             <li>5% de desconto em combos</li>
+          </ul>
+        </div>
+
+        <div class="value-card" style="border-top: 5px solid #9c8880;">
+          <h4 style="font-size: 1.5rem; margin-top: 10px; color: #9c8880;">Bronze <span style="font-size: 1rem; float: inline-end; color: var(--beco-blue);">Gratis</span></h4>
+          <div style="font-size: 2rem; margin: 15px 0; font-weight: bold; color: var(--beco-blue);">50-99 <span style="font-size: 1rem; font-weight: normal;">pontos</span></div>
+          <ul style="text-align: left; list-style-position: inside; margin-bottom: 20px;">
+            <li>Todos os benefícios Ferro</li>
+            <li>7% de desconto em combos</li>
+            <li>1x Promo Exclusiva aleatoria do mes</li>
+          </ul>
+        </div>
+
+        <div class="value-card" style="border-top: 5px solid #243b62;">
+          <h4 style="font-size: 1.5rem; margin-top: 10px; color: #243b62;">Prata <span style="font-size: 1rem; float: inline-end; color: var(--beco-blue);">Gratis</span></h4>
+          <div style="font-size: 2rem; margin: 15px 0; font-weight: bold; color: var(--beco-blue);">100-149 <span style="font-size: 1rem; font-weight: normal;">pontos</span></div>
+          <ul style="text-align: left; list-style-position: inside; margin-bottom: 20px;">
+            <li>Todos os benefícios Bronze</li>
+            <li>9% de desconto em combos</li>
             <li>Presente de aniversário</li>
           </ul>
         </div>
         
-        <div class="value-card" style="border-top: 5px solid #DAA520; transform: scale(1.05);">
-          <h4 style="font-size: 1.5rem; margin-top: 10px; color: #B8860B;">Gold</h4>
-          <div style="font-size: 2rem; margin: 15px 0; font-weight: bold; color: var(--beco-blue);">500-999 <span style="font-size: 1rem; font-weight: normal;">pontos</span></div>
+        <div class="value-card">
+        <h4>AVISO IMPORTANTE</h4>
+		<table>
+			<h5>🎯 Limite Diário de Pontuação</h5>
+			<h6>Para manter a justiça e evitar abusos no sistema de fidelidade, os pontos acumulados diariamente serão limitados a:</h5>
+			<p>no máximo 50 pontos por dia por CPF!</p>
+			<br>
+			<h5>🕒 Validade dos Pontos</h5>
+			<h6>Para incentivar a fidelidade contínua, os pontos acumulados têm validade:</h5>
+			<p>Os pontos expiram após 6 meses sem novas compras.</p>
+			<br>
+			<h6>Essas regras asseguram a sustentabilidade do programa, beneficiando os clientes fiéis de verdade e preservando a qualidade dos benefícios.</h6>
+		</table>
+        </div>
+
+        <div class="value-card" style="border-top: 5px solid #b08e42;border-bottom: 5px solid #b08e42;">
+          <h4 style="font-size: 1.5rem; margin-top: 10px; color: #b08e42;">Ouro <span style="font-size: 1rem; float: inline-end; color: var(--beco-blue);">R$ 12,00/mes</span></h4>
+          <div style="font-size: 2rem; margin: 15px 0; font-weight: bold; color: var(--beco-blue);">150-199 <span style="font-size: 1rem; font-weight: normal;">pontos</span></div>
           <ul style="text-align: left; list-style-position: inside; margin-bottom: 20px;">
-            <li>Todos os benefícios Silver</li>
+            <li>Todos os benefícios Prata</li>
             <li>10% de desconto em combos</li>
-            <li>Fila preferencial</li>
+            <li>5% de desconto em todo cardapio</li>
             <li>Sobremesa grátis 1x por mês</li>
           </ul>
         </div>
         
-        <div class="value-card" style="border-top: 5px solid #4682B4;">
-          <h4 style="font-size: 1.5rem; margin-top: 10px; color: #104E8B;">Platinum</h4>
-          <div style="font-size: 2rem; margin: 15px 0; font-weight: bold; color: var(--beco-blue);">1000+ <span style="font-size: 1rem; font-weight: normal;">pontos</span></div>
+        <div class="value-card" style="border-top: 5px solid #0e795a; border-bottom: 5px solid #0e795a;">
+          <h4 style="font-size: 1.5rem; margin-top: 10px; color: #0e795a;">Platina <span style="font-size: 1rem; float: inline-end; color: var(--beco-blue);">R$ 12,00/mes</span></h4>
+          <div style="font-size: 2rem; margin: 15px 0; font-weight: bold; color: var(--beco-blue);">200-249 <span style="font-size: 1rem; font-weight: normal;">pontos</span></div>
           <ul style="text-align: left; list-style-position: inside; margin-bottom: 20px;">
-            <li>Todos os benefícios Gold</li>
+            <li>Todos os benefícios Ouro</li>
+            <li>10% de desconto em combos</li>
+            <li>10% de desconto em todo cardápio</li>
+            <li>Acomp. grátis 1x por mês</li>
+          </ul>
+        </div>
+
+        <div class="value-card" style="border: 1px solid #05587b; border-top: 5px solid #05587b; border-bottom: 5px solid #05587b;">
+          <h4 style="font-size: 1.5rem; margin-top: 10px; color: #05587b;">Diamante <span style="font-size: 1rem; float: inline-end; color: var(--beco-blue);">R$ 12,00/mes</span></h4>
+          <div style="font-size: 2rem; margin: 15px 0; font-weight: bold; color: var(--beco-blue);">250-299 <span style="font-size: 1rem; font-weight: normal;">pontos</span></div>
+          <ul style="text-align: left; list-style-position: inside; margin-bottom: 20px;">
+            <li>Todos os benefícios Platina</li>
+            <li>12% de desconto em combos</li>
             <li>15% de desconto em todo cardápio</li>
-            <li>Degustações exclusivas</li>
-            <li>Entrega grátis no Delivery</li>
-            <li>Upgrade gratuito em qualquer produto</li>
+            <li>Sanduiche grátis 1x por mês</li>
+            <li>Tag Exclusiva: "Diamante"</li>
+          </ul>
+        </div>
+
+        <div class="value-card" style="border: 1px solid #852f81; border-top: 5px solid #852f81; border-bottom: 5px solid #852f81;">
+          <h4 style="font-size: 1.5rem; margin-top: 10px; color: #852f81;">Mestre dos Cupons<span style="font-size: 1rem; float: inline-end; color: var(--beco-blue);">R$ 5,00/mes</span></h4>
+          <div style="font-size: 2rem; margin: 15px 0; font-weight: bold; color: var(--beco-blue);">300-399 <span style="font-size: 1rem; font-weight: normal;">pontos</span></div>
+          <ul style="text-align: left; list-style-position: inside; margin-bottom: 20px;">
+            <li>Todos os benefícios Diamante</li>
+            <li>14% de desconto em combos</li>
+            <li>17% de desconto em todo cardápio</li>
+            <li>58% de desconto no Club do Beco</li>
+            <li>Combo grátis 1x cada 2/mês</li>
+            <li>Tag Exclusiva: "Mestre dos Cupons"</li>
+            <li>Passe Livre <span class="tooltip" style="color: aqua">ⓘ
+			  <span class="tooltip-text">Use Fila Preferencial, Tem Cartao Master, Tem Prioridade no pedido</span>
+			</span>
+			</li>
+          </ul>
+        </div>
+
+        <div class="value-card" id="oculto" style="border: 1px solid #83ecf9; border-top: 5px solid #83ecf9; border-bottom: 5px solid #83ecf9; opacity: 0">
+          <h4 style="font-size: 1.5rem; margin-top: 10px; color: #83ecf9;">Beco Oculto<span style="font-size: 1rem; float: inline-end; color: var(--beco-blue);">Gratis</span></h4>
+          <div style="font-size: 2rem; margin: 15px 0; font-weight: bold; color: var(--beco-blue);">500 <span style="font-size: 1rem; font-weight: normal;">pontos</span></div>
+          <ul style="text-align: left; list-style-position: inside; margin-bottom: 20px;">
+            <li>Beneficios Mestre dos Cupons</li>
+			<li>Cupom de combo grátis personalizado</li>
+            <li>15% de desconto em combos</li>
+            <li>20% de desconto em todo cardápio</li>
+            <li>100% de desconto no Club do Beco</li>
+            <li>Combo grátis 1x cada 1/mês</li>
+			<li>Acesso exclusivo aos experimentais</li>
+            <li>Tag Exclusiva: "Lendário do Beco"</li>
+            <li>Passe Livre <span class="tooltip" style="color: aqua">ⓘ
+			  <span class="tooltip-text">Use Fila Preferencial, Tem Cartao Master, Tem Prioridade no pedido</span>
+			</span>
+			</li>
           </ul>
         </div>
       </div>
@@ -265,19 +350,18 @@
         <div class="footer-about">
           <div class="footer-logo">
             <img src="attached_assets/image.png" alt="Logo Beco" height="40">
-            <span style="color: var(--beco-cream); font-family: 'Baloo 2'; font-weight: bold; margin-left: 10px;">Beco</span>
           </div>
-          <p>É no Beco que o sabor se esconde. Hambúrgueres artesanais feitos com ingredientes frescos e muito amor.</p>
+          <p>É no Beco que o sabor se esconde!<br>Hambúrgueres artesanais feitos com ingredientes frescos e muito amor.</p>
         </div>
         
         <div class="footer-links-section">
           <h4 class="footer-heading">Links Rápidos</h4>
           <ul class="footer-links">
-            <li><a href="index.html">Início</a></li>
-            <li><a href="cardapio.html">Cardápio</a></li>
-            <li><a href="club.html">Club do Beco</a></li>
-            <li><a href="delivery.html">Delivery</a></li>
-            <li><a href="cupons.html">Cupons</a></li>
+            <li><a class="header-btn" href="index.html">Início</a></li>
+            <li><a class="header-btn" href="cardapio.html">Cardápio</a></li>
+            <li><a class="header-btn" href="club.html">Club do Beco</a></li>
+            <li><a class="header-btn" href="delivery.html">Delivery</a></li>
+            <li><a class="header-btn" href="cupons.html">Cupons</a></li>
           </ul>
         </div>
         
@@ -286,15 +370,15 @@
           <ul class="footer-contact">
             <li>
               <i class="fas fa-map-marker-alt"></i>
-              <span>Av. Paulista, 1000 - São Paulo, SP</span>
+              <span>- Joinville, SC</span>
             </li>
             <li>
               <i class="fas fa-phone"></i>
-              <span>(11) 3456-7890</span>
+              <span>(47) 9748-4860</span>
             </li>
             <li>
               <i class="fas fa-envelope"></i>
-              <span>contato@beco.com.br</span>
+              <span>redebeco@outlook.com</span>
             </li>
           </ul>
         </div>
@@ -312,25 +396,27 @@
               <i class="fab fa-twitter"></i>
             </a>
           </div>
-          
-          <h4 class="footer-heading">Newsletter</h4>
-          <form class="newsletter-form">
-            <input type="email" class="newsletter-input" placeholder="Seu e-mail">
-            <button type="submit" class="newsletter-btn">
-              <i class="fas fa-paper-plane"></i>
-            </button>
-          </form>
         </div>
       </div>
       
       <div class="footer-bottom">
-        <p>&copy; 2024 Beco. Todos os direitos reservados.</p>
+        <p>&copy; 2025 Beco. Todos os direitos reservados.</p>
       </div>
     </div>
   </footer>
 
   <!-- JavaScript -->
   <script>
+	const ocultobtn = document.getElementById("oculto");
+	
+	ocultobtn.addEventListener('click', () => {
+	if (ocultobtn.style.opacity === "0") {
+		ocultobtn.style.opacity = "1";
+		} else {
+		ocultobtn.style.opacity = "0";
+		}
+	});
+	
     // Mobile Menu
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const mobileMenuClose = document.getElementById('mobileMenuClose');
