@@ -299,6 +299,11 @@ header {
   background-color: #c79920;
 }
 
+.badge.secret {
+  background-color: #ffeeef;
+  color: #fff;
+}
+
 .badge.verde {
   background-color: var(--beco-turquoise);
 }
