@@ -3,21 +3,377 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Club do Beco — programa de fidelidade com níveis exclusivos e benefícios incríveis em Joinville, SC.">
   <link rel="icon" type="image/png" href="attached_assets/logo.png">
-  <title>Beco - O melhor e mais gostoso!</title>
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>Club do Beco — Programa de Fidelidade</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* ── Tier Cards ── */
+    .tiers-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .tier-card {
+      background: var(--white);
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1.5px solid var(--gray-light);
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.25s;
+    }
+
+    .tier-card:hover {
+      box-shadow: 0 8px 28px rgba(6,57,76,0.14);
+    }
+
+    .tier-card-header {
+      padding: 20px 20px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .tier-badge-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .tier-name {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--white);
+      line-height: 1;
+    }
+
+    .tier-price-tag {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.75);
+      background: rgba(0,0,0,0.18);
+      padding: 3px 9px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+
+    .tier-points {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.8);
+      letter-spacing: 0.05em;
+    }
+
+    .tier-card-body {
+      padding: 16px 20px 20px;
+      flex: 1;
+    }
+
+    .tier-benefits {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .tier-benefits li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.85rem;
+      color: var(--text);
+      line-height: 1.45;
+    }
+
+    .tier-benefits li i {
+      font-size: 0.72rem;
+      margin-top: 4px;
+      flex-shrink: 0;
+      color: var(--beco-turquoise);
+    }
+
+    /* Tier colors */
+    .tier-ferro   .tier-card-header { background: linear-gradient(135deg, #6b5c56, #4e3f39); }
+    .tier-bronze  .tier-card-header { background: linear-gradient(135deg, #cd7f32, #a05e1a); }
+    .tier-prata   .tier-card-header { background: linear-gradient(135deg, #7d9ab0, #5a7a90); }
+    .tier-ouro    .tier-card-header { background: linear-gradient(135deg, #c99a20, #a07a10); }
+    .tier-platina .tier-card-header { background: linear-gradient(135deg, #0e9e74, #0a7558); }
+    .tier-diamante .tier-card-header { background: linear-gradient(135deg, #2575c4, #1a5a99); }
+    .tier-mestre  .tier-card-header { background: linear-gradient(135deg, #7b3f9e, #5a2b7a); }
+
+    .tier-ferro   { border-color: #6b5c56; }
+    .tier-bronze  { border-color: #cd7f32; }
+    .tier-prata   { border-color: #7d9ab0; }
+    .tier-ouro    { border-color: #c99a20; }
+    .tier-platina { border-color: #0e9e74; }
+    .tier-diamante { border-color: #2575c4; }
+    .tier-mestre  { border-color: #7b3f9e; }
+
+    /* Mestre - destaque especial */
+    .tier-mestre-wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .tier-card.tier-mestre .tier-card-body {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 24px;
+    }
+
+    /* Mystery card */
+    .mystery-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 48px;
+    }
+
+    .tier-card.tier-oculto {
+      width: 100%;
+      max-width: 420px;
+      cursor: pointer;
+      border: 1.5px dashed var(--beco-turquoise);
+      transition: transform 0.3s, box-shadow 0.3s, opacity 0.4s;
+    }
+
+    .tier-card.tier-oculto .tier-card-header {
+      background: linear-gradient(135deg, #0d8a9e, #06394C);
+    }
+
+    .tier-oculto-hint {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 28px;
+      gap: 10px;
+      color: var(--text-muted);
+    }
+
+    .tier-oculto-hint i {
+      font-size: 2rem;
+      color: var(--beco-turquoise);
+    }
+
+    .tier-oculto-hint span {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .tier-oculto-content {
+      display: none;
+    }
+
+    .tier-oculto.revealed .tier-oculto-hint {
+      display: none;
+    }
+
+    .tier-oculto.revealed .tier-oculto-content {
+      display: block;
+    }
+
+    /* Rules box */
+    .rules-box {
+      background-color: var(--beco-mid);
+      border-radius: 8px;
+      border: 1.5px solid var(--gray-light);
+      padding: 28px 32px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px 40px;
+      margin-bottom: 0;
+    }
+
+    .rule-item h5 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--beco-blue);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .rule-item h5 i {
+      color: var(--beco-turquoise);
+      font-size: 0.9rem;
+    }
+
+    .rule-item p {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      line-height: 1.6;
+    }
+
+    /* "Como Funciona" equal-height fix */
+    .how-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    .how-card {
+      background: var(--white);
+      border: 1.5px solid var(--gray-light);
+      border-radius: 8px;
+      padding: 28px 22px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .how-card:hover {
+      border-color: var(--beco-turquoise);
+      box-shadow: 0 6px 20px rgba(32,177,199,0.12);
+    }
+
+    .how-card .value-icon {
+      flex-shrink: 0;
+    }
+
+    .how-card h4 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--beco-blue);
+      margin: 0;
+    }
+
+    .how-card p {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .step-num {
+      width: 28px;
+      height: 28px;
+      background: var(--beco-blue);
+      color: var(--white);
+      border-radius: 50%;
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    /* Steps row */
+    .steps-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      align-items: start;
+      margin-top: 36px;
+    }
+
+    .step-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 20px;
+      background: var(--white);
+      border-radius: 8px;
+      border: 1.5px solid var(--gray-light);
+    }
+
+    .step-card p {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin: 4px 0 0;
+    }
+
+    .step-card h5 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: var(--beco-blue);
+    }
+
+    .tooltip-icon {
+      color: var(--beco-turquoise);
+      cursor: help;
+      position: relative;
+      display: inline-block;
+    }
+
+    .tooltip-icon .tooltip-text {
+      visibility: hidden;
+      width: 230px;
+      background-color: var(--beco-dark);
+      color: rgba(255,255,255,0.88);
+      text-align: left;
+      border-radius: 4px;
+      padding: 10px 12px;
+      position: absolute;
+      z-index: 100;
+      bottom: 130%;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: opacity 0.25s;
+      font-size: 0.8rem;
+      line-height: 1.5;
+      border-left: 3px solid var(--beco-turquoise);
+      pointer-events: none;
+    }
+
+    .tooltip-icon:hover .tooltip-text {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    @media (max-width: 900px) {
+      .tiers-grid { grid-template-columns: repeat(2, 1fr); }
+      .tier-card.tier-mestre .tier-card-body { grid-template-columns: 1fr; }
+      .rules-box { grid-template-columns: 1fr; }
+      .how-grid { grid-template-columns: 1fr; }
+      .steps-row { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 600px) {
+      .tiers-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
-  <!-- Header -->
+
   <header>
     <div class="container">
       <div class="header-content">
         <a href="index.html" class="logo">
-          <img src="attached_assets/logo.png" alt="Logo Beco"  width="80">
+          <img src="attached_assets/logo.png" alt="Logo Beco">
         </a>
-        
         <nav>
           <ul class="nav-menu">
             <li><a class="header-btn" href="index.html">Início</a></li>
@@ -27,433 +383,439 @@
             <li><a class="header-btn" href="delivery.html">Delivery</a></li>
           </ul>
         </nav>
-        
         <div class="order-btn-wrapper">
-          <a href="https://www.ifood.com.br/delivery/joinville-sc/beco-fatima/1db60d9c-7d80-448a-8a23-46ae675f4904" target="_blank" class="order-btn">Peça pelo Ifood</a>
+          <a href="https://www.ifood.com.br/delivery/joinville-sc/beco-fatima/1db60d9c-7d80-448a-8a23-46ae675f4904" target="_blank" class="order-btn">Peça pelo iFood</a>
         </div>
-        
-        <button class="mobile-menu-btn" id="mobileMenuBtn">
-          <i class="fas fa-bars"></i>
-        </button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
       </div>
     </div>
   </header>
-  
-  <!-- Mobile Menu -->
+
   <div class="mobile-menu" id="mobileMenu">
-    <button class="mobile-menu-close" id="mobileMenuClose">
-      <i class="fas fa-times"></i>
-    </button>
+    <button class="mobile-menu-close" id="mobileMenuClose"><i class="fas fa-times"></i></button>
     <ul>
-      <li><a class="header-btn" href="index.html">Início</a></li>
-      <li><a class="header-btn" href="cardapio.html">Cardápio</a></li>
-      <li><a class="header-btn" href="club.html">Club do Beco</a></li>
-      <li><a class="header-btn" href="delivery.html">Delivery</a></li>
-      <li><a class="header-btn" href="cupons.html">Cupons</a></li>
-      <li><a class="header-btn" href="https://www.ifood.com.br/delivery/joinville-sc/beco-fatima/1db60d9c-7d80-448a-8a23-46ae675f4904" target="_blank" class="order-btn">Pelo Ifood</a></li>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="cardapio.html">Cardápio</a></li>
+      <li><a href="club.html">Club do Beco</a></li>
+      <li><a href="delivery.html">Delivery</a></li>
+      <li><a href="cupons.html">Cupons</a></li>
     </ul>
+    <a href="https://www.ifood.com.br/delivery/joinville-sc/beco-fatima/1db60d9c-7d80-448a-8a23-46ae675f4904" target="_blank" class="order-btn">Peça pelo iFood</a>
   </div>
-  
   <div class="overlay" id="overlay"></div>
-  
-  <!-- Club Hero -->
+
+  <!-- Hero -->
   <section class="hero">
     <div class="container">
       <div class="hero-content">
         <div class="hero-text">
+          <div class="hero-eyebrow">Programa de Fidelidade</div>
           <h1><span>Club</span> do Beco</h1>
-          <p>Faça parte do nosso clube de vantagens exclusivas e aproveite benefícios especiais em todas as suas compras!</p>
+          <p>Faça parte do nosso clube, acumule pontos a cada compra e desbloqueie benefícios exclusivos em cada nível.</p>
           <div class="btn-group">
-            <a href="#cadastro" class="btn btn-primary">Como entrar</a>
-            <a href="#beneficios" class="btn btn-secondary">Ver Benefícios</a>
+            <a href="#como-funciona" class="btn btn-primary">Como funciona</a>
+            <a href="#niveis" class="btn btn-outline">Ver Níveis</a>
           </div>
         </div>
         <div class="hero-img">
-          <img src="attached_assets/noproduct.png" alt="">
+          <img src="menu_imagens_no_placed/brinde_offset.png" alt="Club do Beco">
         </div>
       </div>
     </div>
-    <div class="wave-divider">
-      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"></path>
-      </svg>
-    </div>
   </section>
-  
-  <!-- Como Funciona Section -->
-  <section class="featured-menu">
+
+  <!-- Como Funciona -->
+  <section class="featured-menu" id="como-funciona">
     <div class="container">
       <div class="section-title">
         <h2>Como Funciona</h2>
         <p>Entenda como o Club do Beco pode trazer muito mais sabor para sua vida</p>
       </div>
-      
-      <div class="values-grid">
-        <div class="value-card">
-          <div class="value-icon">
-            <i class="fas fa-user-plus"></i>
-          </div>
+      <div class="how-grid">
+        <div class="how-card">
+          <div class="value-icon"><i class="fas fa-user-plus"></i></div>
           <h4>Cadastre-se</h4>
-          <p>Faça seu cadastro de forma rápida e gratuita no nosso aplicativo do beco.</p>
+          <p>Faça seu cadastro de forma rápida e gratuita no nosso aplicativo do Beco.</p>
         </div>
-        
-        <div class="value-card">
-          <div class="value-icon">
-            <i class="fas fa-shopping-bag"></i>
-          </div>
+        <div class="how-card">
+          <div class="value-icon"><i class="fas fa-shopping-bag"></i></div>
           <h4>Compre</h4>
           <p>A cada compra nas lojas Beco pelo app, você acumula pontos automaticamente.</p>
         </div>
-        
-        <div class="value-card">
-          <div class="value-icon">
-            <i class="fas fa-gift"></i>
-          </div>
+        <div class="how-card">
+          <div class="value-icon"><i class="fas fa-gift"></i></div>
           <h4>Ganhe</h4>
           <p>Troque seus pontos por descontos exclusivos, produtos grátis e muito mais!</p>
         </div>
       </div>
     </div>
   </section>
-  
-  <!-- Benefícios Section -->
-  <section class="about" id="beneficios">
+
+  <!-- Benefícios gerais -->
+  <section class="about">
     <div class="container">
       <div class="section-title">
         <h2>Benefícios Exclusivos</h2>
         <p>Confira as vantagens de ser um membro do Club do Beco</p>
       </div>
-      
-      <div class="values">
-        <div class="values-grid">
-          <div class="value-card">
-            <div class="value-icon">
-              <i class="fas fa-star"></i>
-            </div>
-            <h4>Pontos Beco</h4>
-            <p>A cada R$ 5,00 gasto, você acumula 1,5 ponto. Troque seus pontos por descontos e produtos.</p>
-          </div>
-          
-          <div class="value-card">
-            <div class="value-icon">
-              <i class="fas fa-percentage"></i>
-            </div>
-            <h4>Descontos Exclusivos</h4>
-            <p>Promoções e descontos exclusivos disponíveis apenas para membros do clube.</p>
-          </div>
-          
-          <div class="value-card">
-            <div class="value-icon">
-              <i class="fas fa-birthday-cake"></i>
-            </div>
-            <h4>Presente de Aniversário</h4>
-            <p>Ganhe um mini combo do beco grátis no mês do seu aniversário para comemorar com a gente!</p>
-          </div>
-          
-          <div class="value-card">
-            <div class="value-icon">
-              <i class="fas fa-hamburger"></i>
-            </div>
-            <h4>Degustação Prévia</h4>
-            <p>Seja o primeiro a experimentar novos lanches antes do lançamento oficial.</p>
-          </div>
-          
-          <div class="value-card">
-            <div class="value-icon">
-              <i class="fas fa-bullhorn"></i>
-            </div>
-            <h4>Novidades Antecipadas</h4>
-            <p>Receba informações sobre lançamentos e eventos com antecedência exclusiva.</p>
-          </div>
-          
-          <div class="value-card">
-            <div class="value-icon">
-              <i class="fas fa-medal"></i>
-            </div>
-            <h4>Programa de Níveis</h4>
-            <p>Quanto mais você compra, mais status conquista, desbloqueando benefícios ainda maiores.</p>
-          </div>
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-icon"><i class="fas fa-star"></i></div>
+          <h4>Pontos Beco</h4>
+          <p>A cada R$ 5,00 gasto, você acumula 1,5 ponto. Troque seus pontos por descontos e produtos.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon"><i class="fas fa-percentage"></i></div>
+          <h4>Descontos Exclusivos</h4>
+          <p>Promoções e descontos disponíveis apenas para membros do clube.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon"><i class="fas fa-birthday-cake"></i></div>
+          <h4>Presente de Aniversário</h4>
+          <p>Ganhe um mini combo grátis no mês do seu aniversário para comemorar com a gente!</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon"><i class="fas fa-flask"></i></div>
+          <h4>Degustação Prévia</h4>
+          <p>Seja o primeiro a experimentar novos lanches antes do lançamento oficial.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon"><i class="fas fa-bell"></i></div>
+          <h4>Novidades Antecipadas</h4>
+          <p>Receba informações sobre lançamentos e eventos com antecedência exclusiva.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon"><i class="fas fa-medal"></i></div>
+          <h4>Programa de Níveis</h4>
+          <p>Quanto mais você compra, mais status conquista, desbloqueando benefícios ainda maiores.</p>
         </div>
       </div>
     </div>
   </section>
-  
-  <!-- Cadastro Section -->
-  <section class="featured-menu" id="cadastro" style="background-color: #f0f7fa;">
-    <div class="container">
-      <div class="section-title">
-        <h2>Como se cadastrar</h2>
-        <p>É rápido, fácil e você já começa a ganhar benefícios imediatamente</p>
-      </div>
-      
-      <div class="about-content">
-        <div class="about-text">
-        <h2>Siga as Etapas:</h2>
-          <p>Você pode se cadastrar no Club do Beco com três etapas:</p>
-          <ul style="list-style-type: none; margin-top: 20px;">
-            <li style="margin-bottom: 15px; display: flex; align-items: center;">
-              <span><strong>Baixe o App:</strong><br> Baixe o aplicativo Beco, clique em "Club do Beco" e complete seu cadastro.</span>
-              <span><strong>Cadastre-se:</strong><br>Preencha o formulário no botão abaixo e receba as instruções por e-mail.</span>
-              <span><strong>Comece a pontuar:</strong><br>Acesse sua conta no app e já comece a acumular pontos a cada pedido</span>
-            </li>
-          </ul>
-        </div>
-        <div class="about-img">
-          <img src="attached_assets/noproduct.png" alt="">
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Níveis do Clube -->
-  <section class="featured-menu">
+
+  <!-- Níveis do Club -->
+  <section class="featured-menu" id="niveis">
     <div class="container">
       <div class="section-title">
         <h2>Níveis do Club</h2>
         <p>Quanto mais você consome, mais benefícios você desbloqueia</p>
       </div>
-      
 
-      <div class="values-grid" style="grid-template-columns: repeat(3, 1fr);">
-        <div class="value-card" style="border-top: 5px solid #fff;">
-          <h4 style="font-size: 1.5rem; margin-top: 10px; color: #000;">Basico</h4>
-          <ul style="text-align: left; list-style-position: inside; margin-bottom: 20px;">
-            <li>Acúmulo de pontos por compras</li>
-			<li>Promoções exclusivas para membros</li>
-			<li>Convites antecipados para lançamentos</li>
-			<li>Acumulo de pontos 2x no mes de aniversário</li>
-			<li>Gratis até o nivel Prata</li>
-		  </ul>
-        </div>
+      <!-- Tiers gratuitos: Ferro, Bronze, Prata -->
+      <div class="tiers-grid" style="margin-bottom: 20px;">
 
-        <div class="value-card" style="border-top: 5px solid #3d332d;">
-          <h4 style="font-size: 1.5rem; margin-top: 10px; color: #3d332d;">Ferro <span style="font-size: 1rem; float: inline-end; color: var(--beco-blue);">Gratis</span></h4>
-          <div style="font-size: 2rem; margin: 15px 0; font-weight: bold; color: var(--beco-blue);">0-49 <span style="font-size: 1rem; font-weight: normal;">pontos</span></div>
-          <ul style="text-align: left; list-style-position: inside; margin-bottom: 20px;">
-            <li>Todos os benefícios básicos</li>
-            <li>5% de desconto em combos</li>
-          </ul>
-        </div>
-
-        <div class="value-card" style="border-top: 5px solid #9c8880;">
-          <h4 style="font-size: 1.5rem; margin-top: 10px; color: #9c8880;">Bronze <span style="font-size: 1rem; float: inline-end; color: var(--beco-blue);">Gratis</span></h4>
-          <div style="font-size: 2rem; margin: 15px 0; font-weight: bold; color: var(--beco-blue);">50-99 <span style="font-size: 1rem; font-weight: normal;">pontos</span></div>
-          <ul style="text-align: left; list-style-position: inside; margin-bottom: 20px;">
-            <li>Todos os benefícios Ferro</li>
-            <li>7% de desconto em combos</li>
-            <li>1x Promo Exclusiva aleatoria do mes</li>
-          </ul>
+        <div class="tier-card tier-ferro">
+          <div class="tier-card-header">
+            <div class="tier-badge-row">
+              <span class="tier-name"><i class="fas fa-shield-alt" style="margin-right:7px;font-size:.9em;"></i>Ferro</span>
+              <span class="tier-price-tag">Grátis</span>
+            </div>
+            <div class="tier-points">0 – 49 pontos</div>
+          </div>
+          <div class="tier-card-body">
+            <ul class="tier-benefits">
+              <li><i class="fas fa-check-circle"></i>Acúmulo de pontos por compras</li>
+              <li><i class="fas fa-check-circle"></i>Promoções exclusivas para membros</li>
+              <li><i class="fas fa-check-circle"></i>Convites antecipados para lançamentos</li>
+              <li><i class="fas fa-check-circle"></i>Pontos 2x no mês de aniversário</li>
+              <li><i class="fas fa-check-circle"></i>5% de desconto em combos</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="value-card" style="border-top: 5px solid #243b62;">
-          <h4 style="font-size: 1.5rem; margin-top: 10px; color: #243b62;">Prata <span style="font-size: 1rem; float: inline-end; color: var(--beco-blue);">Gratis</span></h4>
-          <div style="font-size: 2rem; margin: 15px 0; font-weight: bold; color: var(--beco-blue);">100-149 <span style="font-size: 1rem; font-weight: normal;">pontos</span></div>
-          <ul style="text-align: left; list-style-position: inside; margin-bottom: 20px;">
-            <li>Todos os benefícios Bronze</li>
-            <li>9% de desconto em combos</li>
-            <li>Presente de aniversário</li>
-          </ul>
-        </div>
-        
-        <div class="value-card">
-        <h4>AVISO IMPORTANTE</h4>
-		<table>
-			<h5>🎯 Limite Diário de Pontuação</h5>
-			<h6>Para manter a justiça e evitar abusos no sistema de fidelidade, os pontos acumulados diariamente serão limitados a:</h5>
-			<p>no máximo 50 pontos por dia por CPF!</p>
-			<br>
-			<h5>🕒 Validade dos Pontos</h5>
-			<h6>Para incentivar a fidelidade contínua, os pontos acumulados têm validade:</h5>
-			<p>Os pontos expiram após 2 meses sem novas compras.</p>
-			<br>
-			<h6>Essas regras asseguram a sustentabilidade do programa, beneficiando os clientes fiéis de verdade e preservando a qualidade dos benefícios.</h6>
-		</table>
+        <div class="tier-card tier-bronze">
+          <div class="tier-card-header">
+            <div class="tier-badge-row">
+              <span class="tier-name"><i class="fas fa-award" style="margin-right:7px;font-size:.9em;"></i>Bronze</span>
+              <span class="tier-price-tag">Grátis</span>
+            </div>
+            <div class="tier-points">50 – 99 pontos</div>
+          </div>
+          <div class="tier-card-body">
+            <ul class="tier-benefits">
+              <li><i class="fas fa-check-circle"></i>Todos os benefícios Ferro</li>
+              <li><i class="fas fa-check-circle"></i>7% de desconto em combos</li>
+              <li><i class="fas fa-check-circle"></i>1x promo exclusiva aleatória por mês</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="value-card" style="border-top: 5px solid #b08e42;border-bottom: 5px solid #b08e42;">
-          <h4 style="font-size: 1.5rem; margin-top: 10px; color: #b08e42;">Ouro <span style="font-size: 1rem; float: inline-end; color: var(--beco-blue);">R$ 12,00/mes</span></h4>
-          <div style="font-size: 2rem; margin: 15px 0; font-weight: bold; color: var(--beco-blue);">150-199 <span style="font-size: 1rem; font-weight: normal;">pontos</span></div>
-          <ul style="text-align: left; list-style-position: inside; margin-bottom: 20px;">
-            <li>Todos os benefícios Prata</li>
-            <li>10% de desconto em combos</li>
-            <li>5% de desconto em todo cardapio</li>
-            <li>Sobremesa grátis 1x por mês</li>
-          </ul>
-        </div>
-        
-        <div class="value-card" style="border-top: 5px solid #0e795a; border-bottom: 5px solid #0e795a;">
-          <h4 style="font-size: 1.5rem; margin-top: 10px; color: #0e795a;">Platina <span style="font-size: 1rem; float: inline-end; color: var(--beco-blue);">R$ 12,00/mes</span></h4>
-          <div style="font-size: 2rem; margin: 15px 0; font-weight: bold; color: var(--beco-blue);">200-249 <span style="font-size: 1rem; font-weight: normal;">pontos</span></div>
-          <ul style="text-align: left; list-style-position: inside; margin-bottom: 20px;">
-            <li>Todos os benefícios Ouro</li>
-            <li>10% de desconto em combos</li>
-            <li>10% de desconto em todo cardápio</li>
-            <li>Acomp. grátis 1x por mês</li>
-          </ul>
+        <div class="tier-card tier-prata">
+          <div class="tier-card-header">
+            <div class="tier-badge-row">
+              <span class="tier-name"><i class="fas fa-certificate" style="margin-right:7px;font-size:.9em;"></i>Prata</span>
+              <span class="tier-price-tag">Grátis</span>
+            </div>
+            <div class="tier-points">100 – 149 pontos</div>
+          </div>
+          <div class="tier-card-body">
+            <ul class="tier-benefits">
+              <li><i class="fas fa-check-circle"></i>Todos os benefícios Bronze</li>
+              <li><i class="fas fa-check-circle"></i>9% de desconto em combos</li>
+              <li><i class="fas fa-check-circle"></i>Presente de aniversário</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="value-card" style="border: 1px solid #05587b; border-top: 5px solid #05587b; border-bottom: 5px solid #05587b;">
-          <h4 style="font-size: 1.5rem; margin-top: 10px; color: #05587b;">Diamante <span style="font-size: 1rem; float: inline-end; color: var(--beco-blue);">R$ 12,00/mes</span></h4>
-          <div style="font-size: 2rem; margin: 15px 0; font-weight: bold; color: var(--beco-blue);">250-299 <span style="font-size: 1rem; font-weight: normal;">pontos</span></div>
-          <ul style="text-align: left; list-style-position: inside; margin-bottom: 20px;">
-            <li>Todos os benefícios Platina</li>
-            <li>12% de desconto em combos</li>
-            <li>15% de desconto em todo cardápio</li>
-            <li>Sanduiche grátis 1x por mês</li>
-            <li>Tag Exclusiva: "Diamante"</li>
-          </ul>
+      </div>
+
+      <!-- Tiers pagos: Ouro, Platina, Diamante -->
+      <div class="tiers-grid" style="margin-bottom: 20px;">
+
+        <div class="tier-card tier-ouro">
+          <div class="tier-card-header">
+            <div class="tier-badge-row">
+              <span class="tier-name"><i class="fas fa-crown" style="margin-right:7px;font-size:.9em;"></i>Ouro</span>
+              <span class="tier-price-tag">R$ 12,00/mês</span>
+            </div>
+            <div class="tier-points">150 – 199 pontos</div>
+          </div>
+          <div class="tier-card-body">
+            <ul class="tier-benefits">
+              <li><i class="fas fa-check-circle"></i>Todos os benefícios Prata</li>
+              <li><i class="fas fa-check-circle"></i>10% de desconto em combos</li>
+              <li><i class="fas fa-check-circle"></i>5% de desconto em todo o cardápio</li>
+              <li><i class="fas fa-check-circle"></i>Sobremesa grátis 1x por mês</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="value-card" style="border: 1px solid #852f81; border-top: 5px solid #852f81; border-bottom: 5px solid #852f81;">
-          <h4 style="font-size: 1.5rem; margin-top: 10px; color: #852f81;">Mestre dos Cupons<span style="font-size: 1rem; float: inline-end; color: var(--beco-blue);">R$ 5,00/mes</span></h4>
-          <div style="font-size: 2rem; margin: 15px 0; font-weight: bold; color: var(--beco-blue);">300-399 <span style="font-size: 1rem; font-weight: normal;">pontos</span></div>
-          <ul style="text-align: left; list-style-position: inside; margin-bottom: 20px;">
-            <li>Todos os benefícios Diamante</li>
-            <li>14% de desconto em combos</li>
-            <li>17% de desconto em todo cardápio</li>
-            <li>58% de desconto no Club do Beco</li>
-            <li>Combo grátis 1x cada 2/mês</li>
-            <li>Tag Exclusiva: "Mestre dos Cupons"</li>
-            <li>Passe Livre <span class="tooltip" style="color: aqua">ⓘ
-			  <span class="tooltip-text">Use Fila Preferencial, Tem Cartao Master, Tem Prioridade no pedido</span>
-			</span>
-			</li>
-          </ul>
+        <div class="tier-card tier-platina">
+          <div class="tier-card-header">
+            <div class="tier-badge-row">
+              <span class="tier-name"><i class="fas fa-gem" style="margin-right:7px;font-size:.9em;"></i>Platina</span>
+              <span class="tier-price-tag">R$ 12,00/mês</span>
+            </div>
+            <div class="tier-points">200 – 249 pontos</div>
+          </div>
+          <div class="tier-card-body">
+            <ul class="tier-benefits">
+              <li><i class="fas fa-check-circle"></i>Todos os benefícios Ouro</li>
+              <li><i class="fas fa-check-circle"></i>10% de desconto em combos</li>
+              <li><i class="fas fa-check-circle"></i>10% de desconto em todo o cardápio</li>
+              <li><i class="fas fa-check-circle"></i>Acompanhamento grátis 1x por mês</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="value-card" id="oculto" style="border: 1px solid #83ecf9; border-top: 5px solid #83ecf9; border-bottom: 5px solid #83ecf9; opacity: 0">
-          <h4 style="font-size: 1.5rem; margin-top: 10px; color: #83ecf9;">Beco Oculto<span style="font-size: 1rem; float: inline-end; color: var(--beco-blue);">Gratis</span></h4>
-          <div style="font-size: 2rem; margin: 15px 0; font-weight: bold; color: var(--beco-blue);">500 <span style="font-size: 1rem; font-weight: normal;">pontos</span></div>
-          <ul style="text-align: left; list-style-position: inside; margin-bottom: 20px;">
-            <li>Beneficios Mestre dos Cupons</li>
-			<li>Cupom de combo grátis personalizado</li>
-            <li>15% de desconto em combos</li>
-            <li>20% de desconto em todo cardápio</li>
-            <li>100% de desconto no Club do Beco</li>
-            <li>Combo grátis 1x cada 1/mês</li>
-			<li>Acesso exclusivo aos experimentais</li>
-            <li>Tag Exclusiva: "Lendário do Beco"</li>
-            <li>Passe Livre <span class="tooltip" style="color: aqua">ⓘ
-			  <span class="tooltip-text">Use Fila Preferencial, Tem Cartao Master, Tem Prioridade no pedido</span>
-			</span>
-			</li>
-          </ul>
+        <div class="tier-card tier-diamante">
+          <div class="tier-card-header">
+            <div class="tier-badge-row">
+              <span class="tier-name"><i class="fas fa-diamond" style="margin-right:7px;font-size:.9em;"></i>Diamante</span>
+              <span class="tier-price-tag">R$ 12,00/mês</span>
+            </div>
+            <div class="tier-points">250 – 299 pontos</div>
+          </div>
+          <div class="tier-card-body">
+            <ul class="tier-benefits">
+              <li><i class="fas fa-check-circle"></i>Todos os benefícios Platina</li>
+              <li><i class="fas fa-check-circle"></i>12% de desconto em combos</li>
+              <li><i class="fas fa-check-circle"></i>15% de desconto em todo o cardápio</li>
+              <li><i class="fas fa-check-circle"></i>Sanduíche grátis 1x por mês</li>
+              <li><i class="fas fa-check-circle"></i>Tag exclusiva: "Diamante"</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Mestre dos Cupons — largura total -->
+      <div class="tier-mestre-wrapper">
+        <div class="tier-card tier-mestre">
+          <div class="tier-card-header">
+            <div class="tier-badge-row">
+              <span class="tier-name"><i class="fas fa-ticket-alt" style="margin-right:7px;font-size:.9em;"></i>Mestre dos Cupons</span>
+              <span class="tier-price-tag">R$ 5,00/mês</span>
+            </div>
+            <div class="tier-points">300 – 399 pontos</div>
+          </div>
+          <div class="tier-card-body">
+            <ul class="tier-benefits">
+              <li><i class="fas fa-check-circle"></i>Todos os benefícios Diamante</li>
+              <li><i class="fas fa-check-circle"></i>14% de desconto em combos</li>
+              <li><i class="fas fa-check-circle"></i>17% de desconto em todo o cardápio</li>
+              <li><i class="fas fa-check-circle"></i>58% de desconto no Club do Beco</li>
+              <li><i class="fas fa-check-circle"></i>Combo grátis 1x a cada 2 meses</li>
+              <li><i class="fas fa-check-circle"></i>Tag exclusiva: "Mestre dos Cupons"</li>
+              <li>
+                <i class="fas fa-check-circle"></i>
+                Passe Livre
+                <span class="tooltip-icon" style="margin-left:4px;">
+                  <i class="fas fa-info-circle"></i>
+                  <span class="tooltip-text">Fila preferencial, cartão Master e prioridade no pedido.</span>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Beco Oculto — nível secreto -->
+      <div class="mystery-wrapper">
+        <div class="tier-card tier-oculto" id="becoOcultoCard">
+          <div class="tier-oculto-hint">
+            <i class="fas fa-question-circle"></i>
+            <span>Nível Secreto — Clique para revelar</span>
+          </div>
+          <div class="tier-oculto-content">
+            <div class="tier-card-header">
+              <div class="tier-badge-row">
+                <span class="tier-name"><i class="fas fa-mask" style="margin-right:7px;font-size:.9em;"></i>Beco Oculto</span>
+                <span class="tier-price-tag">Grátis</span>
+              </div>
+              <div class="tier-points">500+ pontos — Lendário</div>
+            </div>
+            <div class="tier-card-body">
+              <ul class="tier-benefits">
+                <li><i class="fas fa-check-circle"></i>Todos os benefícios Mestre dos Cupons</li>
+                <li><i class="fas fa-check-circle"></i>Cupom de combo grátis personalizado</li>
+                <li><i class="fas fa-check-circle"></i>15% de desconto em combos</li>
+                <li><i class="fas fa-check-circle"></i>20% de desconto em todo o cardápio</li>
+                <li><i class="fas fa-check-circle"></i>100% de desconto no Club do Beco</li>
+                <li><i class="fas fa-check-circle"></i>Combo grátis 1x por mês</li>
+                <li><i class="fas fa-check-circle"></i>Acesso exclusivo aos experimentais</li>
+                <li><i class="fas fa-check-circle"></i>Tag exclusiva: "Lendário do Beco"</li>
+                <li>
+                  <i class="fas fa-check-circle"></i>Passe Livre
+                  <span class="tooltip-icon" style="margin-left:4px;">
+                    <i class="fas fa-info-circle"></i>
+                    <span class="tooltip-text">Fila preferencial, cartão Master e prioridade no pedido.</span>
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Regras do programa -->
+      <div class="section-title" style="margin-bottom:24px;">
+        <h2>Regras do Programa</h2>
+        <p>Informações importantes para garantir a justiça e a sustentabilidade do club</p>
+      </div>
+      <div class="rules-box">
+        <div class="rule-item">
+          <h5><i class="fas fa-bullseye"></i> Limite Diário de Pontuação</h5>
+          <p>Para manter a justiça e evitar abusos, os pontos acumulados diariamente são limitados a <strong>50 pontos por CPF</strong>. Isso garante que o programa beneficie os clientes fiéis de verdade.</p>
+        </div>
+        <div class="rule-item">
+          <h5><i class="fas fa-clock"></i> Validade dos Pontos</h5>
+          <p>Para incentivar a fidelidade contínua, os pontos têm validade: <strong>expiram após 2 meses sem novas compras</strong>. Fique sempre ativo para não perder seus benefícios!</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Como se cadastrar -->
+  <section class="about" id="cadastro" style="background-color: var(--beco-light);">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text">
+          <h2>Como se Cadastrar</h2>
+          <p>É rápido, fácil e você já começa a ganhar benefícios imediatamente.</p>
+          <div class="steps-row" style="margin-top: 24px; grid-template-columns: 1fr;">
+            <div class="step-card">
+              <div class="step-num">1</div>
+              <div>
+                <h5>Baixe o App</h5>
+                <p>Baixe o aplicativo Beco na App Store ou Google Play.</p>
+              </div>
+            </div>
+            <div class="step-card">
+              <div class="step-num">2</div>
+              <div>
+                <h5>Cadastre-se</h5>
+                <p>Clique em "Club do Beco" e complete seu cadastro gratuito.</p>
+              </div>
+            </div>
+            <div class="step-card">
+              <div class="step-num">3</div>
+              <div>
+                <h5>Comece a Pontuar</h5>
+                <p>Acesse sua conta e acumule pontos a cada pedido!</p>
+              </div>
+            </div>
+          </div>
+          <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:28px;">
+            <a href="#" style="display:inline-block;">
+              <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download na App Store" height="42">
+            </a>
+            <a href="#" style="display:inline-block;">
+              <img src="https://play.google.com/intl/en_us/badges/static/images/badges/pt-br_badge_web_generic.png" alt="Disponível no Google Play" height="42">
+            </a>
+          </div>
+        </div>
+        <div class="about-img">
+          <img src="attached_assets/image_1776210079498.png" alt="App do Beco">
         </div>
       </div>
     </div>
   </section>
-  
-  <!-- Footer -->
+
   <footer>
     <div class="container">
       <div class="footer-content">
         <div class="footer-about">
-          <div class="footer-logo">
-            <img src="attached_assets/logo.png" alt="Logo Beco" height="40">
-          </div>
-          <p>É no Beco que o sabor se esconde!<br>Hambúrgueres artesanais feitos com ingredientes frescos e muito amor.</p>
+          <div class="footer-logo"><img src="attached_assets/logo.png" alt="Logo Beco"></div>
+          <p>É no Beco que o sabor se esconde! Hambúrgueres artesanais feitos com ingredientes frescos e muito amor.</p>
         </div>
-        
         <div class="footer-links-section">
           <h4 class="footer-heading">Links Rápidos</h4>
           <ul class="footer-links">
-            <li><a class="header-btn" href="index.html">Início</a></li>
-            <li><a class="header-btn" href="cardapio.html">Cardápio</a></li>
-            <li><a class="header-btn" href="club.html">Club do Beco</a></li>
-            <li><a class="header-btn" href="delivery.html">Delivery</a></li>
-            <li><a class="header-btn" href="cupons.html">Cupons</a></li>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="cardapio.html">Cardápio</a></li>
+            <li><a href="club.html">Club do Beco</a></li>
+            <li><a href="delivery.html">Delivery</a></li>
+            <li><a href="cupons.html">Cupons</a></li>
           </ul>
         </div>
-        
         <div class="footer-contact-section">
           <h4 class="footer-heading">Contato</h4>
           <ul class="footer-contact">
-            <li>
-              <i class="fas fa-map-marker-alt"></i>
-              <span>- Joinville, SC</span>
-            </li>
-            <li>
-              <i class="fas fa-phone"></i>
-              <span>(47) 9748-4860</span>
-            </li>
-            <li>
-              <i class="fas fa-envelope"></i>
-              <span>redebeco@outlook.com</span>
-            </li>
+            <li><i class="fas fa-map-marker-alt"></i><span>Joinville, SC</span></li>
+            <li><i class="fas fa-phone"></i><span>(47) 99748-4860</span></li>
+            <li><i class="fas fa-envelope"></i><span>redebeco@outlook.com</span></li>
           </ul>
         </div>
-        
         <div class="footer-social-section">
           <h4 class="footer-heading">Siga-nos</h4>
           <div class="social-links">
-            <a href="#" class="social-link">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="#" class="social-link">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="#" class="social-link">
-              <i class="fab fa-twitter"></i>
-            </a>
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
           </div>
         </div>
       </div>
-      
       <div class="footer-bottom">
         <p>&copy; 2026 Beco. Todos os direitos reservados.</p>
       </div>
     </div>
   </footer>
 
-  <!-- JavaScript -->
   <script>
-	const ocultobtn = document.getElementById("oculto");
-	
-	ocultobtn.addEventListener('click', () => {
-	if (ocultobtn.style.opacity === "0") {
-		ocultobtn.style.opacity = "1";
-		} else {
-		ocultobtn.style.opacity = "0";
-		}
-	});
-	
     // Mobile Menu
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const mobileMenuClose = document.getElementById('mobileMenuClose');
     const mobileMenu = document.getElementById('mobileMenu');
     const overlay = document.getElementById('overlay');
-    
-    mobileMenuBtn.addEventListener('click', () => {
-      mobileMenu.classList.add('open');
-      overlay.classList.add('open');
-      document.body.style.overflow = 'hidden';
-    });
-    
-    mobileMenuClose.addEventListener('click', () => {
-      mobileMenu.classList.remove('open');
-      overlay.classList.remove('open');
-      document.body.style.overflow = '';
-    });
-    
-    overlay.addEventListener('click', () => {
-      mobileMenu.classList.remove('open');
-      overlay.classList.remove('open');
-      document.body.style.overflow = '';
-    });
-    
-    // Smooth Scrolling
+    mobileMenuBtn.addEventListener('click', () => { mobileMenu.classList.add('open'); overlay.classList.add('open'); document.body.style.overflow = 'hidden'; });
+    mobileMenuClose.addEventListener('click', () => { mobileMenu.classList.remove('open'); overlay.classList.remove('open'); document.body.style.overflow = ''; });
+    overlay.addEventListener('click', () => { mobileMenu.classList.remove('open'); overlay.classList.remove('open'); document.body.style.overflow = ''; });
+
+    // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         e.preventDefault();
-        
         const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          window.scrollTo({
-            top: target.offsetTop - 100,
-            behavior: 'smooth'
-          });
-        }
+        if (target) window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
       });
+    });
+
+    // Beco Oculto reveal
+    const ocultoCard = document.getElementById('becoOcultoCard');
+    ocultoCard.addEventListener('click', () => {
+      ocultoCard.classList.toggle('revealed');
     });
   </script>
 </body>
