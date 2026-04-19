@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cardápio completo do Beco — sanduíches, acompanhamentos, bebidas e sobremesas em Joinville, SC.">
   <link rel="icon" type="image/png" href="attached_assets/logo.png">
-  <title>Beco - O melhor e mais gostoso!</title>
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>Cardápio — Beco Hambúrgueres | Joinville</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Header -->
+
   <header>
     <div class="container">
       <div class="header-content">
         <a href="index.html" class="logo">
-          <img src="attached_assets/logo.png" alt="Logo Beco"  width="80">
+          <img src="attached_assets/logo.png" alt="Logo Beco">
         </a>
-        
         <nav>
           <ul class="nav-menu">
             <li><a class="header-btn" href="index.html">Início</a></li>
@@ -27,1040 +27,481 @@
             <li><a class="header-btn" href="delivery.html">Delivery</a></li>
           </ul>
         </nav>
-        
         <div class="order-btn-wrapper">
-          <a href="https://www.ifood.com.br/delivery/joinville-sc/beco-fatima/1db60d9c-7d80-448a-8a23-46ae675f4904" target="_blank" class="order-btn">Peça pelo Ifood</a>
+          <a href="https://www.ifood.com.br/delivery/joinville-sc/beco-fatima/1db60d9c-7d80-448a-8a23-46ae675f4904" target="_blank" class="order-btn">Peça pelo iFood</a>
         </div>
-        
-        <button class="mobile-menu-btn" id="mobileMenuBtn">
-          <i class="fas fa-bars"></i>
-        </button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
       </div>
     </div>
   </header>
-  
-  <!-- Mobile Menu -->
+
   <div class="mobile-menu" id="mobileMenu">
-    <button class="mobile-menu-close" id="mobileMenuClose">
-      <i class="fas fa-times"></i>
-    </button>
+    <button class="mobile-menu-close" id="mobileMenuClose"><i class="fas fa-times"></i></button>
     <ul>
-      <li><a class="header-btn" href="index.html">Início</a></li>
-      <li><a class="header-btn" href="cardapio.html">Cardápio</a></li>
-      <li><a class="header-btn" href="club.html">Club do Beco</a></li>
-      <li><a class="header-btn" href="delivery.html">Delivery</a></li>
-      <li><a class="header-btn" href="cupons.html">Cupons</a></li>
-      <li><a class="header-btn" href="https://www.ifood.com.br/delivery/joinville-sc/beco-fatima/1db60d9c-7d80-448a-8a23-46ae675f4904" target="_blank" class="order-btn">Pelo Ifood</a></li>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="cardapio.html">Cardápio</a></li>
+      <li><a href="club.html">Club do Beco</a></li>
+      <li><a href="delivery.html">Delivery</a></li>
+      <li><a href="cupons.html">Cupons</a></li>
     </ul>
+    <a href="https://www.ifood.com.br/delivery/joinville-sc/beco-fatima/1db60d9c-7d80-448a-8a23-46ae675f4904" target="_blank" class="order-btn">Peça pelo iFood</a>
   </div>
-  
   <div class="overlay" id="overlay"></div>
-  
-  <!-- Cardápio Hero -->
+
   <section class="hero">
     <div class="container">
       <div class="hero-content">
         <div class="hero-text">
+          <div class="hero-eyebrow">Menu Completo</div>
           <h1>Nosso <span>Cardápio</span></h1>
-          <p>Conheça nossas deliciosas opções de hambúrgueres, acompanhamentos e bebidas.</p>
+          <p>Conheça nossas deliciosas opções de hambúrgueres artesanais, acompanhamentos e bebidas.</p>
         </div>
         <div class="hero-img">
-          <img src="attached_assets/noproduct.png" alt="">
+          <img src="menu_imagens_no_placed/BecoSupremo.png" alt="Beco Supremo">
         </div>
       </div>
     </div>
-    <div class="wave-divider">
-      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"></path>
-      </svg>
-    </div>
   </section>
-  
-  <!-- Menu Categoria Tabs -->
+
   <section class="featured-menu">
     <div class="container">
       <div class="section-title">
         <h2>Cardápio Completo</h2>
         <p>Conheça todas as nossas deliciosas opções</p>
       </div>
-      
-      <!-- Mini Categorias Tabs -->
-      <div style="display: flex; justify-content: center; margin-bottom: 40px; flex-wrap: wrap; gap: 10px;">
+
+      <div class="category-tabs-wrapper">
         <button class="category-tab active" data-target="sanduiches">Sanduíches</button>
+        <button class="category-tab" data-target="combos">Combos</button>
         <button class="category-tab" data-target="acompanhamentos">Acompanhamentos</button>
-        <button class="category-tab" data-target="bebidas">Bebidas e Shakes</button>
+        <button class="category-tab" data-target="bebidas">Bebidas</button>
         <button class="category-tab" data-target="sobremesas">Sobremesas</button>
       </div>
-      
+
       <!-- Sanduíches -->
       <div class="category-content active" id="sanduiches">
-        <!-- Os Becos -->
+
         <div class="subcategory">
           <h3 class="subcategory-title">Os Becos</h3>
           <div class="menu-grid">
             <div class="menu-card">
-              <img src="attached_assets/BecoClassico.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Beco Classico</h3>
-                  <span class="badge">Classico</span>
-                </div>
-              </div>
+              <img src="menu_imagens_no_placed/BecoClassico.png" alt="Beco Classico">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Beco Classico</h3><span class="badge">Clássico</span></div></div>
             </div>
-            
             <div class="menu-card">
-              <img src="attached_assets/BecoVerde.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Beco Verde</h3>
-                  <span class="badge verde">Vegetariano</span>
-                </div>
-              </div>
+              <img src="menu_imagens_no_placed/BecoDuplo.png" alt="Beco Duplo">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Beco Duplo</h3></div></div>
             </div>
-
             <div class="menu-card">
-              <img src="attached_assets/BecoDuplo.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Beco Duplo</h3>
-                </div>
-              </div>
+              <img src="menu_imagens_no_placed/BecoPeão.png" alt="Beco Peao">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Beco Peao</h3><span class="badge new">Favorito</span></div></div>
             </div>
-            
             <div class="menu-card">
-              <img src="attached_assets/BecoPicante.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Beco Picante</h3>
-                </div>
-              </div>
+              <img src="menu_imagens_no_placed/BecoPicante.png" alt="Beco Picante">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Beco Picante</h3></div></div>
             </div>
-
             <div class="menu-card">
-              <img src="attached_assets/BecoPeão.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Beco Peao</h3>
-                </div>
-              </div>
+              <img src="menu_imagens_no_placed/BecoSupremo.png" alt="Beco Supremo">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Beco Supremo</h3></div></div>
             </div>
-
             <div class="menu-card">
-              <img src="attached_assets/BecoSupremo.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Beco Supremo</h3>
-                </div>
-              </div>
+              <img src="menu_imagens_no_placed/BecoVerde.png" alt="Beco Verde">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Beco Verde</h3><span class="badge verde">Vegetariano</span></div></div>
             </div>
-
             <div class="menu-card">
-              <img src="attached_assets/BecoOculto.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Beco Oculto</h3>
-                  <span class="badge secret">Secreto</span>
-                </div>
-              </div>
+              <img src="menu_imagens_no_placed/BecoOculto.png" alt="Beco Oculto">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Beco Oculto</h3><span class="badge secret">Secreto</span></div></div>
             </div>
           </div>
         </div>
-        
-        <!-- Mini Becos -->
+
         <div class="subcategory">
           <h3 class="subcategory-title">Mini Becos</h3>
           <div class="menu-grid">
             <div class="menu-card">
-              <img src="attached_assets/BecoMini.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Beco Mini</h3>
-                </div>
-              </div>
+              <img src="menu_imagens_no_placed/BecoMini.png" alt="Beco Mini">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Beco Mini</h3></div></div>
             </div>
-            
             <div class="menu-card">
-              <img src="attached_assets/BecoMiniDuplo.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Beco Mini Duplo</h3>
-                </div>
-              </div>
+              <img src="menu_imagens_no_placed/BecoMiniDuplo.png" alt="Beco Mini Duplo">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Beco Mini Duplo</h3></div></div>
             </div>
-
             <div class="menu-card">
-              <img src="attached_assets/MiniPeão.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Mini Peao</h3>
-                </div>
-              </div>
+              <img src="menu_imagens_no_placed/MiniPeão.png" alt="Mini Peao">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Mini Peao</h3></div></div>
             </div>
-
             <div class="menu-card">
-              <img src="attached_assets/XBeco.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>X Beco</h3>
-                </div>
-              </div>
+              <img src="menu_imagens_no_placed/MiniPicante.png" alt="Mini Picante">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Mini Picante</h3></div></div>
             </div>
-
             <div class="menu-card">
-              <img src="attached_assets/XBecoDuplo.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>X Beco Duplo</h3>
-                </div>
-              </div>
+              <img src="menu_imagens_no_placed/MiniBequinho.png" alt="Mini Bequinho">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Mini Bequinho</h3></div></div>
+            </div>
+            <div class="menu-card">
+              <img src="menu_imagens_no_placed/XBeco.png" alt="X Beco">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>X Beco</h3></div></div>
+            </div>
+            <div class="menu-card">
+              <img src="menu_imagens_no_placed/XBecoDuplo.png" alt="X Beco Duplo">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>X Beco Duplo</h3></div></div>
             </div>
           </div>
         </div>
-        
-        <!-- Frango -->
+
         <div class="subcategory">
-          <h3 class="subcategory-title">Frango</h3>
+          <h3 class="subcategory-title">Frango — Chicote</h3>
           <div class="menu-grid">
             <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Chicote Original</h3>
-                  <span class="badge">Classico</span>
-                </div>
-              </div>
+              <img src="menu_imagens_no_placed/ChicoteOriginal.png" alt="Chicote Original">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Chicote Original</h3><span class="badge">Clássico</span></div></div>
             </div>
-            
             <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Chicote Duplo</h3>
-                </div>
-              </div>
+              <img src="menu_imagens_no_placed/ChicoteDuplo.png" alt="Chicote Duplo">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Chicote Duplo</h3></div></div>
             </div>
-
             <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Chicote Verde</h3>
-                  <span class="badge verde">Vegano</span>
-                </div>
-              </div>
+              <img src="menu_imagens_no_placed/ChicoteSupremo.png" alt="Chicote Supremo">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Chicote Supremo</h3></div></div>
             </div>
           </div>
         </div>
-        
-        <!-- Staks -->
-        <div class="subcategory">
-          <h3 class="subcategory-title">Staks</h3>
-          <div class="menu-grid">
-            <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Stak Duplo</h3>
-                </div>
-              </div>
-            </div>
-                       
-            <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Stak Triplo</h3>
-                </div>
-              </div>
-            </div>
 
-            <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Stak Cheddar & Bacon</h3>
-                </div>
-              </div>
-            </div>
-
-            <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Stak Bacon Duplo</h3>
-                </div>
-              </div>
-            </div>
-
-            <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Stak Bacon Triplo</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        <!-- Frango -->
-        <div class="subcategory">
-          <h3 class="subcategory-title">Infantil</h3>
-          <div class="menu-grid">
-            <div class="menu-card">
-              <img src="attached_assets/MiniBequinho.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Mini Bequinho</h3>
-                </div>
-              </div>
-            </div>
-            
-            <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Brinquedo</h3>
-                </div>
-              </div>
-            </div>
-
-            <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Beco Kids</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
-    </div>
-      
+
+      <!-- Combos -->
+      <div class="category-content" id="combos">
+
+        <div class="subcategory">
+          <h3 class="subcategory-title">Combos Beco</h3>
+          <div class="menu-grid">
+            <div class="menu-card">
+              <img src="menu_imagens_no_placed/ComboBecoClassico.png" alt="Combo Beco Classico">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Combo Beco Classico</h3></div></div>
+            </div>
+            <div class="menu-card">
+              <img src="menu_imagens_no_placed/ComboBecoDuplo.png" alt="Combo Beco Duplo">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Combo Beco Duplo</h3></div></div>
+            </div>
+            <div class="menu-card">
+              <img src="menu_imagens_no_placed/ComboBecoPeão.png" alt="Combo Beco Peao">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Combo Beco Peao</h3><span class="badge new">Favorito</span></div></div>
+            </div>
+            <div class="menu-card">
+              <img src="menu_imagens_no_placed/ComboBecoPicante.png" alt="Combo Beco Picante">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Combo Beco Picante</h3></div></div>
+            </div>
+            <div class="menu-card">
+              <img src="menu_imagens_no_placed/ComboBecoSupremo.png" alt="Combo Beco Supremo">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Combo Beco Supremo</h3></div></div>
+            </div>
+            <div class="menu-card">
+              <img src="menu_imagens_no_placed/ComboBecoVerde.png" alt="Combo Beco Verde">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Combo Beco Verde</h3><span class="badge verde">Vegetariano</span></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="subcategory">
+          <h3 class="subcategory-title">Combos Mini</h3>
+          <div class="menu-grid">
+            <div class="menu-card">
+              <img src="menu_imagens_no_placed/ComboBecoMini.png" alt="Combo Beco Mini">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Combo Beco Mini</h3></div></div>
+            </div>
+            <div class="menu-card">
+              <img src="menu_imagens_no_placed/ComboBecoMiniDuplo.png" alt="Combo Beco Mini Duplo">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Combo Beco Mini Duplo</h3></div></div>
+            </div>
+            <div class="menu-card">
+              <img src="menu_imagens_no_placed/ComboMiniPeão.png" alt="Combo Mini Peao">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Combo Mini Peao</h3></div></div>
+            </div>
+            <div class="menu-card">
+              <img src="menu_imagens_no_placed/ComboMiniPicante.png" alt="Combo Mini Picante">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Combo Mini Picante</h3></div></div>
+            </div>
+            <div class="menu-card">
+              <img src="menu_imagens_no_placed/ComboMiniBequinho.png" alt="Combo Mini Bequinho">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Combo Mini Bequinho</h3></div></div>
+            </div>
+            <div class="menu-card">
+              <img src="menu_imagens_no_placed/ComboXBeco.png" alt="Combo X Beco">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Combo X Beco</h3></div></div>
+            </div>
+            <div class="menu-card">
+              <img src="menu_imagens_no_placed/ComboXBecoDuplo.png" alt="Combo X Beco Duplo">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Combo X Beco Duplo</h3></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="subcategory">
+          <h3 class="subcategory-title">Combos Chicote</h3>
+          <div class="menu-grid">
+            <div class="menu-card">
+              <img src="menu_imagens_no_placed/ComboChicoteOriginal.png" alt="Combo Chicote Original">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Combo Chicote Original</h3></div></div>
+            </div>
+            <div class="menu-card">
+              <img src="menu_imagens_no_placed/ComboChicoteDuplo.png" alt="Combo Chicote Duplo">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Combo Chicote Duplo</h3></div></div>
+            </div>
+            <div class="menu-card">
+              <img src="menu_imagens_no_placed/ComboChicoteSupremo.png" alt="Combo Chicote Supremo">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Combo Chicote Supremo</h3></div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
       <!-- Acompanhamentos -->
       <div class="category-content" id="acompanhamentos">
-        <!-- Batatas -->
+
         <div class="subcategory">
-          <h3 class="subcategory-title">Batatas</h3>
+          <h3 class="subcategory-title">Batatas Fritas</h3>
           <div class="menu-grid">
             <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Batata Pequena</h3>
-                </div>
-              </div>
+              <img src="menu_imagens_no_placed/BatataP.png" alt="Batata Pequena">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Batata Pequena</h3></div></div>
             </div>
-            
             <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Batata Media</h3>
-                </div>
-              </div>
+              <img src="menu_imagens_no_placed/BatataM.png" alt="Batata Media">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Batata Media</h3></div></div>
             </div>
-
             <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Batata Grande</h3>
-                </div>
-              </div>
+              <img src="menu_imagens_no_placed/BatataG.png" alt="Batata Grande">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Batata Grande</h3></div></div>
             </div>
           </div>
         </div>
-        
-        <!-- Onion Rings -->
-        <div class="subcategory">
-          <h3 class="subcategory-title">Batatas Especiais</h3>
-          <div class="menu-grid">
-            <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Beco Bacon Media</h3>
-                </div>
-              </div>
-            </div>
 
-            <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Beco Bacon Grande</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
         <div class="subcategory">
           <h3 class="subcategory-title">Onion Rings</h3>
           <div class="menu-grid">
             <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Onions Media</h3>
-                </div>
-              </div>
+              <img src="menu_imagens_no_placed/AnelM.png" alt="Onion Rings Media">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Onion Rings Media</h3></div></div>
             </div>
-
             <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Onions Grande</h3>
-                </div>
-              </div>
+              <img src="menu_imagens_no_placed/AnelG.png" alt="Onion Rings Grande">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Onion Rings Grande</h3></div></div>
             </div>
           </div>
         </div>
 
-        <!-- Molhos -->
         <div class="subcategory">
           <h3 class="subcategory-title">Molhos</h3>
           <div class="menu-grid">
             <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Pimentado</h3>
-                </div>
-              </div>
+              <img src="menu_imagens_no_placed/MolhoPicante.png" alt="Molho Pimentado">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Pimentado</h3></div></div>
             </div>
-            
             <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Churrasco</h3>
-                </div>
-              </div>
+              <img src="menu_imagens_no_placed/MolhoChurrasco.png" alt="Molho Churrasco">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Churrasco</h3></div></div>
             </div>
-
             <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Maionese</h3>
-                </div>
-              </div>
+              <img src="menu_imagens_no_placed/MolhoMaionese.png" alt="Maionese">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Maionese</h3></div></div>
             </div>
-
             <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Maionese Verde</h3>
-                </div>
-              </div>
+              <img src="menu_imagens_no_placed/MolhoVerde.png" alt="Maionese Verde">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Maionese Verde</h3><span class="badge verde">Vegano</span></div></div>
             </div>
           </div>
         </div>
+
       </div>
-      
-      <!-- Bebidas e Shakes -->
+
+      <!-- Bebidas -->
       <div class="category-content" id="bebidas">
-        <!-- Refrigerantes -->
+
         <div class="subcategory">
           <h3 class="subcategory-title">Refrigerantes</h3>
           <div class="menu-grid">
             <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Refri Pepsi</h3>
-                </div>
-              </div>
+              <img src="menu_imagens_no_placed/pepsi.png" alt="Pepsi">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Pepsi</h3></div></div>
             </div>
-            
             <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Refri Pepsi Black</h3>
-                </div>
-              </div>
+              <img src="menu_imagens_no_placed/pepsiblack.png" alt="Pepsi Black">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Pepsi Black</h3></div></div>
             </div>
-
             <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Refri Guarana Antarctica</h3>
-                </div>
-              </div>
+              <img src="menu_imagens_no_placed/guarana.png" alt="Guarana Antarctica">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Guaraná Antarctica</h3></div></div>
             </div>
-
             <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Refri Gauarana Antarctica Zero</h3>
-                </div>
-              </div>
+              <img src="menu_imagens_no_placed/guaranazero.png" alt="Guarana Zero">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Guaraná Zero</h3></div></div>
             </div>
-
             <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Refri H2OH! Limao</h3>
-                </div>
-              </div>
+              <img src="menu_imagens_no_placed/h2oh.png" alt="H2OH Limao">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>H2OH! Limão</h3></div></div>
             </div>
-
             <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Refri Sukita Uva</h3>
-                </div>
-              </div>
+              <img src="menu_imagens_no_placed/sukitauva.png" alt="Sukita Uva">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Sukita Uva</h3></div></div>
             </div>
-
             <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Refri Natual Limonada</h3>
-                </div>
-              </div>
+              <img src="menu_imagens_no_placed/LaranjaGaseificada.png" alt="Laranja Gaseificada">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Laranja Gaseificada</h3></div></div>
             </div>
-
             <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Refri Natual Laranja</h3>
-                </div>
-              </div>
+              <img src="menu_imagens_no_placed/UvaGaseificada.png" alt="Uva Gaseificada">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Uva Gaseificada</h3></div></div>
+            </div>
+            <div class="menu-card">
+              <img src="menu_imagens_no_placed/LimonadaGaseificada.png" alt="Limonada Gaseificada">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Limonada Gaseificada</h3></div></div>
             </div>
           </div>
         </div>
-        
-        <!-- Sucos -->
+
         <div class="subcategory">
-          <h3 class="subcategory-title">Sucos</h3>
+          <h3 class="subcategory-title">Sucos Naturais</h3>
           <div class="menu-grid">
             <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Natual One Laranja</h3>
-                </div>
-              </div>
+              <img src="menu_imagens_no_placed/Laranja.png" alt="Suco Laranja">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Suco de Laranja</h3></div></div>
             </div>
-
             <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Natual One Uva</h3>
-                </div>
-              </div>
+              <img src="menu_imagens_no_placed/Uva.png" alt="Suco Uva">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Suco de Uva</h3></div></div>
             </div>
-
             <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Natual One Limonada</h3>
-                </div>
-              </div>
+              <img src="menu_imagens_no_placed/Limao.png" alt="Limonada">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Limonada</h3></div></div>
             </div>
           </div>
         </div>
-      
-        <!-- Aguas -->
+
         <div class="subcategory">
-          <h3 class="subcategory-title">Aguas</h3>
+          <h3 class="subcategory-title">Águas</h3>
           <div class="menu-grid">
             <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Agua 310ml</h3>
-                </div>
-              </div>
+              <img src="menu_imagens_no_placed/agua310.png" alt="Agua 310ml">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Água 310ml</h3></div></div>
             </div>
             <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Agua 500ml</h3>
-                </div>
-              </div>
+              <img src="menu_imagens_no_placed/agua500.png" alt="Agua 500ml">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Água 500ml</h3></div></div>
             </div>
           </div>
         </div>
 
-        <!-- Becoshakes -->
-        <div class="subcategory">
-          <h3 class="subcategory-title">Becoshakes</h3>
-          <div class="menu-grid">
-            <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Becoshakes de Baunilha</h3>
-                </div>
-              </div>
-            </div>
-
-            <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Becoshakes de Banana</h3>
-                  <span class="badge">Classico</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Becoshakes de Chocolate</h3>
-                </div>
-              </div>
-            </div>
-
-            <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Becoshakes de Morango</h3>
-                </div>
-              </div>
-            </div>
-
-            <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Becoshakes de Nutella</h3>
-                </div>
-              </div>
-            </div>
-
-            <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Batido Misterio</h3>
-                  <span class="badge secret">Secreto</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Batido Chocante</h3>
-                </div>
-              </div>
-            </div>
-
-            <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Batido Oculto</h3>
-                  <span class="badge secret">Secreto</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
 
       <!-- Sobremesas -->
       <div class="category-content" id="sobremesas">
-        <!-- Casquinhas -->
-        <div class="subcategory">
-          <h3 class="subcategory-title">Casquinhas</h3>
-          <div class="menu-grid">
-            <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Casquinha de Baunilha</h3>
-                  <span class="badge">Classico</span>
-                </div>
-              </div>
-            </div>
-            
-            <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Casquinha Misty</h3>
-                  <span class="badge">Classico</span>
-                </div>
-              </div>
-            </div>
 
-            <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Casquinha de Banana c/ Canela</h3>
-                  <span class="badge">Classico</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Casquinhas Rechedas -->
-        <div class="subcategory">
-          <h3 class="subcategory-title">Casquinhas Rechedas</h3>
-          <div class="menu-grid">
-            <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Recheda Chocolate</h3>
-                </div>
-              </div>
-            </div>
-            
-            <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Recheda Leite Condensado</h3>
-                </div>
-              </div>
-            </div>
-
-            <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Recheda de Morango</h3>
-                </div>
-              </div>
-            </div>
-
-            <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Recheda de Nutella</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Sundaes -->
         <div class="subcategory">
           <h3 class="subcategory-title">Sundaes</h3>
           <div class="menu-grid">
             <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Sundae de Morango</h3>
-                </div>
-              </div>
+              <img src="menu_imagens_no_placed/SundaePaçoca.png" alt="Sundae Pacoca">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Sundae Paçoca</h3></div></div>
             </div>
-            
             <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Sundae de Paçoca</h3>
-                  <span class="badge">Classico</span>
-                </div>
-              </div>
+              <img src="menu_imagens_no_placed/SundaeChocolate.png" alt="Sundae Chocolate">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Sundae Chocolate</h3></div></div>
             </div>
-
             <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Sundae de Chocolate</h3>
-                </div>
-              </div>
+              <img src="menu_imagens_no_placed/SundaeMorango.png" alt="Sundae Morango">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Sundae Morango</h3></div></div>
             </div>
-
             <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Sundae de Nutella</h3>
-                </div>
-              </div>
+              <img src="menu_imagens_no_placed/SundaeNutella.png" alt="Sundae Nutella">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Sundae Nutella</h3></div></div>
             </div>
           </div>
         </div>
 
-        <!-- Cremixs -->
         <div class="subcategory">
-          <h3 class="subcategory-title">Cremixs</h3>
+          <h3 class="subcategory-title">Cremix</h3>
           <div class="menu-grid">
             <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Cremix de Nutella</h3>
-                  <span class="badge new">Novo</span>
-                </div>
-              </div>
+              <img src="menu_imagens_no_placed/CremixChocante.png" alt="Cremix Chocante">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Cremix Chocante</h3></div></div>
             </div>
-            
             <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Cremix de Paçoca</h3>
-                </div>
-              </div>
+              <img src="menu_imagens_no_placed/CremixNutella.png" alt="Cremix Nutella">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Cremix Nutella</h3></div></div>
             </div>
-
             <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Cremix Chocante</h3>
-                </div>
-              </div>
+              <img src="menu_imagens_no_placed/CremixPaçoca.png" alt="Cremix Pacoca">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Cremix Paçoca</h3></div></div>
             </div>
-
             <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Cremix Tropical</h3>
-                </div>
-              </div>
-            </div>
-
-            <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Cremix Sombrio</h3>
-                  <span class="badge secret">Secreto</span>
-                </div>
-              </div>
+              <img src="menu_imagens_no_placed/CremixTropical.png" alt="Cremix Tropical">
+              <div class="menu-card-content"><div class="menu-card-top"><h3>Cremix Tropical</h3></div></div>
             </div>
           </div>
         </div>
-        
-        <!-- Tchoc Splashs -->
-        <div class="subcategory">
-          <h3 class="subcategory-title">Tchoc Splashs</h3>
-          <div class="menu-grid">
-            <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Tchoc Splashs Original</h3>
-                  <span class="badge">Classico</span>
-                </div>
-              </div>
-            </div>
 
-            <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Tchoc Splashs Chocante</h3>
-                </div>
-              </div>
-            </div>
-
-            <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Tchoc Splashs de Nutella</h3>
-                </div>
-              </div>
-            </div>
-
-            <div class="menu-card">
-              <img src="attached_assets/noproduct.png" alt="">
-              <div class="menu-card-content">
-                <div class="menu-card-top">
-                  <h3>Tchoc Splashs de Moranguete</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
+
     </div>
   </section>
-  
-  <!-- Adicione isso ao final do arquivo antes do fechamento do body -->
-  <style>
-    .category-tab {
-      background-color: #f0f0f0;
-      border: none;
-      padding: 10px 20px;
-      margin: 0 5px;
-      border-radius: 20px;
-      cursor: pointer;
-      font-weight: 500;
-      transition: all 0.3s ease;
-    }
-    
-    .category-tab.active,
-    .category-tab:hover {
-      background-color: var(--beco-turquoise);
-      color: white;
-    }
-    
-    .category-content {
-      display: none;
-    }
-    
-    .category-content.active {
-      display: block;
-    }
-    
-    .subcategory {
-      margin-bottom: 60px;
-    }
-    
-    .subcategory-title {
-      font-size: 2rem;
-      color: var(--beco-blue);
-      margin-bottom: 30px;
-      text-align: center;
-      position: relative;
-      padding-bottom: 15px;
-    }
-    
-    .subcategory-title::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80px;
-      height: 3px;
-      background-color: var(--beco-turquoise);
-      border-radius: 3px;
-    }
-  </style>
-  
-  <!-- Footer -->
+
   <footer>
     <div class="container">
       <div class="footer-content">
         <div class="footer-about">
-          <div class="footer-logo">
-            <img src="attached_assets/logo.png" alt="Logo Beco" height="40">
-          </div>
-          <p>É no Beco que o sabor se esconde!<br>Hambúrgueres artesanais feitos com ingredientes frescos e muito amor.</p>
+          <div class="footer-logo"><img src="attached_assets/logo.png" alt="Logo Beco"></div>
+          <p>É no Beco que o sabor se esconde! Hambúrgueres artesanais feitos com ingredientes frescos e muito amor.</p>
         </div>
-        
         <div class="footer-links-section">
           <h4 class="footer-heading">Links Rápidos</h4>
           <ul class="footer-links">
-            <li><a class="header-btn" href="index.html">Início</a></li>
-            <li><a class="header-btn" href="cardapio.html">Cardápio</a></li>
-            <li><a class="header-btn" href="club.html">Club do Beco</a></li>
-            <li><a class="header-btn" href="delivery.html">Delivery</a></li>
-            <li><a class="header-btn" href="cupons.html">Cupons</a></li>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="cardapio.html">Cardápio</a></li>
+            <li><a href="club.html">Club do Beco</a></li>
+            <li><a href="delivery.html">Delivery</a></li>
+            <li><a href="cupons.html">Cupons</a></li>
           </ul>
         </div>
-        
         <div class="footer-contact-section">
           <h4 class="footer-heading">Contato</h4>
           <ul class="footer-contact">
-            <li>
-              <i class="fas fa-map-marker-alt"></i>
-              <span>- Joinville, SC</span>
-            </li>
-            <li>
-              <i class="fas fa-phone"></i>
-              <span>(47) 9748-4860</span>
-            </li>
-            <li>
-              <i class="fas fa-envelope"></i>
-              <span>redebeco@outlook.com</span>
-            </li>
+            <li><i class="fas fa-map-marker-alt"></i><span>Joinville, SC</span></li>
+            <li><i class="fas fa-phone"></i><span>(47) 99748-4860</span></li>
+            <li><i class="fas fa-envelope"></i><span>redebeco@outlook.com</span></li>
           </ul>
         </div>
-        
         <div class="footer-social-section">
           <h4 class="footer-heading">Siga-nos</h4>
           <div class="social-links">
-            <a href="#" class="social-link">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="#" class="social-link">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="#" class="social-link">
-              <i class="fab fa-twitter"></i>
-            </a>
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
           </div>
         </div>
       </div>
-      
       <div class="footer-bottom">
         <p>&copy; 2026 Beco. Todos os direitos reservados.</p>
       </div>
     </div>
   </footer>
 
-  <!-- JavaScript -->
   <script>
-    // Mobile Menu
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const mobileMenuClose = document.getElementById('mobileMenuClose');
     const mobileMenu = document.getElementById('mobileMenu');
     const overlay = document.getElementById('overlay');
-    
-    mobileMenuBtn.addEventListener('click', () => {
-      mobileMenu.classList.add('open');
-      overlay.classList.add('open');
-      document.body.style.overflow = 'hidden';
-    });
-    
-    mobileMenuClose.addEventListener('click', () => {
-      mobileMenu.classList.remove('open');
-      overlay.classList.remove('open');
-      document.body.style.overflow = '';
-    });
-    
-    overlay.addEventListener('click', () => {
-      mobileMenu.classList.remove('open');
-      overlay.classList.remove('open');
-      document.body.style.overflow = '';
-    });
-    
-    // Menu Categories Tabs
-    const categoryTabs = document.querySelectorAll('.category-tab');
-    const categoryContents = document.querySelectorAll('.category-content');
-    
-    categoryTabs.forEach(tab => {
+
+    mobileMenuBtn.addEventListener('click', () => { mobileMenu.classList.add('open'); overlay.classList.add('open'); document.body.style.overflow = 'hidden'; });
+    mobileMenuClose.addEventListener('click', () => { mobileMenu.classList.remove('open'); overlay.classList.remove('open'); document.body.style.overflow = ''; });
+    overlay.addEventListener('click', () => { mobileMenu.classList.remove('open'); overlay.classList.remove('open'); document.body.style.overflow = ''; });
+
+    document.querySelectorAll('.category-tab').forEach(tab => {
       tab.addEventListener('click', () => {
-        // Remove active class from all tabs
-        categoryTabs.forEach(t => t.classList.remove('active'));
-        
-        // Add active class to clicked tab
+        document.querySelectorAll('.category-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.category-content').forEach(c => c.classList.remove('active'));
         tab.classList.add('active');
-        
-        // Hide all category contents
-        categoryContents.forEach(content => content.classList.remove('active'));
-        
-        // Show content corresponding to clicked tab
-        const targetId = tab.getAttribute('data-target');
-        document.getElementById(targetId).classList.add('active');
+        document.getElementById(tab.dataset.target).classList.add('active');
       });
     });
   </script>
